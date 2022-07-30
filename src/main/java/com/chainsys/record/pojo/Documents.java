@@ -3,7 +3,11 @@ package com.chainsys.record.pojo;
 import java.io.File;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Documents {
+	@Id
    private int user_id;
    private String document_name;
    private int document_id;

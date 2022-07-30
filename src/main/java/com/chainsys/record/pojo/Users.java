@@ -2,8 +2,12 @@ package com.chainsys.record.pojo;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Users 
 {
+	@Id
 	 private int user_id;
 		private String user_name;
 		private String user_password;
