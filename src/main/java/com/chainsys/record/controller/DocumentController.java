@@ -28,7 +28,7 @@ public class DocumentController {
 		return "list-document";
 	}
 
-	@GetMapping("/addform")
+	@GetMapping("/addformdocument")
 	public String showAddForm(Model model) {
 		Documents thedoc = new Documents();
 		model.addAttribute("adddocuments", thedoc);
@@ -41,7 +41,7 @@ public class DocumentController {
 		return "redirect:/document/list";
 	}
 
-	@GetMapping("/updateform")
+	@GetMapping("/updateformdocument")
 	public String showUpdateForm(@RequestParam("userid") int id, Model model) {
 		Documents thedoc = docservice.findByid(id);
 		model.addAttribute("updatedocuments", thedoc);

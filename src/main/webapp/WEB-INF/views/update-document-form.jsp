@@ -12,41 +12,41 @@
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="updatedocuments"
-				enctype="multipart/form-data">
+				enctype="multipart/form-data"  style="margin: auto; width: 220px;">
 				<div>
-					<label for="user_id">User id</label>
+					<label for="userId">User id</label>
 					<div>
-						<form:input path="user_id" />
+						<form:input path="userId" />
 					</div>
 				</div>
 				<div>
-					<label for="document_name">Document Name</label>
+					<label for="documentName">Document Name</label>
 					<div>
-						<form:input path="document_name" />
+						<form:input path="documentName" />
 					</div>
 				</div>
 				<div>
-					<label for="document_id">Document Id</label>
+					<label for="documentId">Document Id</label>
 					<div>
-						<form:input path="document_id" />
+						<form:input path="documentId" />
 					</div>
 				</div>
 				<div>
-					<label for="issue_date">Issue Date</label>
+					<label for="issueDate">Issue Date</label>
 					<div>
-						<form:input path="issue_date" />
+						<form:input path="issueDate" />
 					</div>
 				</div>
 				<div>
-					<label for="valid_till">VALID till</label>
+					<label for="validTill">VALID till</label>
 					<div>
-						<form:input path="valid_till" />
+						<form:input path="validTill" />
 					</div>
 				</div>
 				<div>
-					<label for="issued_by">Issued By</label>
+					<label for="issuedBy">Issued By</label>
 					<div>
-						<form:input path="issued_by" />
+						<form:input path="issuedBy" />
 					</div>
 				</div>
 				<div>
@@ -56,15 +56,15 @@
 					</div>
 				</div>
 				<div>
-					<label for="document_image">Document Image</label>
+					<label for="documentImage">Document Image</label>
 					<div>
-						<form:input path="document_image" />
+						<form:input path="documentImage" />
 					</div>
 					<input type="file" name="file" /> <br /> <input type="submit"
 						value="Upload File" />
 				</div>
 				<div>
-					<form:button>Update New</form:button>
+					<form:button>Update</form:button>
 				</div>
 			</form:form>
 		</div>

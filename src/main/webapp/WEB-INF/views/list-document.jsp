@@ -8,6 +8,8 @@
 <title>Document List</title>
 </head>
 <body>
+<div style="width:100%" style="text-align: center;"> 
+<h1 style="color:aqua" >List of Documents</h1>  
 	<div id="table root">
 		<table>
 			<thead>
@@ -25,18 +27,19 @@
 			<tbody>
 				<c:forEach var="docu" items="${alldocuments}">
 					<tr>
-						<td>${docu.user_id}</td>
-						<td>${docu.document_name}</td>
-						<td>${docu.document_id}</td>
-						<td>${docu.issue_date}</td>
-						<td>${docu.valid_till}</td>
-						<td>${docu.issued_by}</td>
+						<td>${docu.userId}</td>
+						<td>${docu.documentName}</td>
+						<td>${docu.documentId}</td>
+						<td>${docu.issueDate}</td>
+						<td>${docu.validTill}</td>
+						<td>${docu.issuedBy}</td>
 						<td>${docu.notes}</td>
-						<td>${docu.document_image}</td>
+						<td>${docu.documentImage}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+	</div>
 	</div>
 </body>
 </html>

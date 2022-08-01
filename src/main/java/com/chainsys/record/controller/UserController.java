@@ -29,7 +29,7 @@ public class UserController
 		model.addAttribute("allusers",theuser);
 		return "list-user";
 }
-	@GetMapping("/addform")
+	@GetMapping("/addformuser")
 	public String showAddForm(Model model)
 	{
 		Users theuser=new Users();
@@ -41,7 +41,7 @@ public class UserController
 	    userservice.save(theuser);
 		return "redirect:/document/addform";
     }
-    @GetMapping("/updateform")
+    @GetMapping("/updateformuser")
    	public String showUpdateForm(@RequestParam("userid") int id,Model model)
    	{
    		Users theuser=userservice.findByid(id);

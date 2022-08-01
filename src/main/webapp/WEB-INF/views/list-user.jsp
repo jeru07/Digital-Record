@@ -4,10 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>User List</title>
 </head>
-<body background="user.png">
+<body>
 <div style="width:100%" style="text-align: center;"> 
 <h1 style="color:Tomato" >LIST OF USERS</h1>  
 	<div id="table root">
@@ -29,14 +28,14 @@
 			<tbody>
 				<c:forEach var="user" items="${allusers}">
 					<tr>
-						<td>${user.user_id}</td>
-						<td>${user.user_name}</td>
-						<td>${user.user_password}</td>
-						<td>${user.first_name}</td>
-						<td>${user.last_name}</td>
-						<td>${user.dob}</td>
-						<td>${user.e_mail}</td>
-						<td>${user.phone_number}</td>
+						<td>${user.userId}</td>
+						<td>${user.userName}</td>
+						<td>${user.userPassword}</td>
+						<td>${user.firstName}</td>
+						<td>${user.lastName}</td>
+						<td>${user.dateOfBirth}</td>
+						<td>${user.eMail}</td>
+						<td>${user.phoneNumber}</td>
 						<td>${user.gender}</td>
 						<td>${user.address}</td>
 					</tr>

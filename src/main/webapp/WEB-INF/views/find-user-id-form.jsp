@@ -11,65 +11,65 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="getuserbyid">
+			<form:form action="add" method="post" modelAttribute="getuserbyid"  style="margin: auto; width: 220px;">
 				<div>
-					<label for="user_id">User id</label>
+					<label for="userId">User id</label>
 					<div>
-						<form:input path="user_id" />
+						<form:input path="userId" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="user_name">User Name</label>
+					<label for="userName">User Name</label>
 					<div>
-						<form:input path="user_name" />
+						<form:input path="userName" readonly="true" />
 					</div>
 				</div>
 				<div>
 					<label for="user_password">User Password</label>
 					<div>
-						<form:input path="user_password" />
+						<form:input path="userPassword" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="first_name">First Name</label>
+					<label for="firstName">First Name</label>
 					<div>
-						<form:input path="first_name" />
+						<form:input path="firstName" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="last_name">Last Name</label>
+					<label for="lastName">Last Name</label>
 					<div>
-						<form:input path="last_name" />
+						<form:input path="lastName" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="dob">Date of Birth</label>
+					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dob" />
+						<form:input path="dateOfBirth" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="e_mail">E-mail</label>
+					<label for="eMail">E-mail</label>
 					<div>
-						<form:input path="e_mail" />
+						<form:input path="eMail" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="phone_number">Phone Number</label>
+					<label for="phoneNumber">Phone Number</label>
 					<div>
-						<form:input path="phone_number" />
+						<form:input path="phoneNumber" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+						<form:input path="gender" readonly="true"/>
 					</div>
 				</div>
 				<div>
 					<label for="address">Address</label>
 					<div>
-						<form:input path="address" />
+						<form:input path="address" readonly="true"/>
 					</div>
 				</div>
 				<div>

@@ -6,48 +6,47 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add User</title>
+<title>Find Document</title>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getdocumentbyid"
-				enctype="multipart/form-data">>
-				
+				enctype="multipart/form-data"  style="margin: auto; width: 220px;">
 				<div>
-					<label for="user_id">User id</label>
+					<label for="userId">User id</label>
 					<div>
-						<form:input path="user_id" readonly="true"/>
+						<form:input path="userId" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="document_name">Document Name</label>
+					<label for="documentName">Document Name</label>
 					<div>
-						<form:input path="document_name" readonly="true"/>
+						<form:input path="documentName" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="document_id">Document Id</label>
+					<label for="documentId">Document Id</label>
 					<div>
-						<form:input path="document_id" readonly="true" />
+						<form:input path="documentId" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="issue_date">Issue Date</label>
+					<label for="issueDate">Issue Date</label>
 					<div>
-						<form:input path="issue_date" readonly="true" />
+						<form:input path="issueDate" readonly="true" />
 					</div>
 				</div>
 				<div>
-					<label for="valid_till">VALID till</label>
+					<label for="validTill">VALID till</label>
 					<div>
-						<form:input path="valid_till" readonly="true"/>
+						<form:input path="validTill" readonly="true"/>
 					</div>
 				</div>
 				<div>
-					<label for="issued_by">Issued By</label>
+					<label for="issuedBy">Issued By</label>
 					<div>
-						<form:input path="issued_by" readonly="true"/>
+						<form:input path="issuedBy" readonly="true"/>
 					</div>
 				</div>
 				<div>
@@ -57,9 +56,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="document_image">Document Image</label>
+					<label for="documentImage">Document Image</label>
 					<div>
-						<form:input path="document_image" readonly="true"/>
+						<form:input path="documentImage" readonly="true"/>
 					</div>
 				</div>
 

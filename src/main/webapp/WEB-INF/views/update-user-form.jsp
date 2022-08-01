@@ -6,58 +6,58 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add User</title>
+<title>Update User</title>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="updateusers">
+			<form:form action="add" method="post" modelAttribute="updateusers"  style="margin: auto; width: 220px;">
 				<div>
-					<label for="user_id">User id</label>
+					<label for="userId">User id</label>
 					<div>
-						<form:input path="user_id" />
+						<form:input path="userId" />
 					</div>
 				</div>
 				<div>
-					<label for="user_name">User Name</label>
+					<label for="userName">User Name</label>
 					<div>
-						<form:input path="user_name" />
+						<form:input path="userName" />
 					</div>
 				</div>
 				<div>
-					<label for="user_password">User Password</label>
+					<label for="userPassword">User Password</label>
 					<div>
-						<form:input path="user_password" />
+						<form:input path="userPassword" />
 					</div>
 				</div>
 				<div>
-					<label for="first_name">First Name</label>
+					<label for="firstName">First Name</label>
 					<div>
-						<form:input path="first_name" />
+						<form:input path="firstName" />
 					</div>
 				</div>
 				<div>
-					<label for="last_name">Last Name</label>
+					<label for="lastName">Last Name</label>
 					<div>
-						<form:input path="last_name" />
+						<form:input path="lastName" />
 					</div>
 				</div>
 				<div>
-					<label for="dob">Date of Birth</label>
+					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dob" />
+						<form:input path="dateOfBirth" />
 					</div>
 				</div>
 				<div>
-					<label for="e_mail">E-mail</label>
+					<label for="eMail">E-mail</label>
 					<div>
-						<form:input path="e_mail" />
+						<form:input path="eMail" />
 					</div>
 				</div>
 				<div>
-					<label for="phone_number">Phone Number</label>
+					<label for="phoneNumber">Phone Number</label>
 					<div>
-						<form:input path="phone_number" />
+						<form:input path="phoneNumber" />
 					</div>
 				</div>
 				<div>
@@ -73,7 +73,7 @@
 					</div>
 				</div>
 				<div>
-					<form:button>UPDATE New</form:button>
+					<form:button>UPDATE</form:button>
 				</div>
 			</form:form>
 		</div>

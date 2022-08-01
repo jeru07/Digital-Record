@@ -2,6 +2,7 @@ package com.chainsys.record.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,95 +11,85 @@ import javax.persistence.Table;
 public class Users 
 {
 	@Id
-	 private int user_id;
-		private String user_name;
-		private String user_password;
-		private String first_name;
-		private String last_name;
-		private Date dob;
-		private String e_mail;
-		private long phone_number;
+	@Column(name="user_id")
+	    private int userId;
+	@Column(name="user_name")
+		private String userName;
+	@Column(name="user_password")
+		private String userPassword;
+	@Column(name="first_name")
+		private String firstName;
+	@Column(name="last_name")
+		private String lastName;
+	@Column(name="dob")
+		private Date dateOfBirth;
+	@Column(name="e_mail")
+		private String eMail;
+	@Column(name="phone_number")
+		private long phoneNumber;
+	@Column(name="gender")
 		private String gender;
+	@Column(name="address")
 		private String address;
-
-		public int getUser_id() {
-			return user_id;
+	
+		public int getUserId() {
+			return userId;
 		}
-
-		public void setUser_id(int user_id) {
-			this.user_id = user_id;
+		public void setUserId(int userId) {
+			this.userId = userId;
 		}
-
-		public String getUser_name() {
-			return user_name;
+		public String getUserName() {
+			return userName;
 		}
-
-		public void setUser_name(String user_name) {
-			this.user_name = user_name;
+		public void setUserName(String userName) {
+			this.userName = userName;
 		}
-
-		public String getUser_password() {
-			return user_password;
+		public String getUserPassword() {
+			return userPassword;
 		}
-
-		public void setUser_password(String user_password) {
-			this.user_password = user_password;
+		public void setUserPassword(String userPassword) {
+			this.userPassword = userPassword;
 		}
-
-		public String getFirst_name() {
-			return first_name;
+		public String getFirstName() {
+			return firstName;
 		}
-
-		public void setFirst_name(String first_name) {
-			this.first_name = first_name;
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
 		}
-
-		public String getLast_name() {
-			return last_name;
+		public String getLastName() {
+			return lastName;
 		}
-
-		public void setLast_name(String last_name) {
-			this.last_name = last_name;
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
 		}
-
-		public Date getDob() {
-			return dob;
+		public Date getDateOfBirth() {
+			return dateOfBirth;
 		}
-
-		public void setDob(Date dob) {
-			this.dob = dob;
+		public void setDateOfBirth(Date dateOfBirth) {
+			this.dateOfBirth = dateOfBirth;
 		}
-
-		public String getE_mail() {
-			return e_mail;
+		public String geteMail() {
+			return eMail;
 		}
-
-		public void setE_mail(String e_mail) {
-			this.e_mail = e_mail;
+		public void seteMail(String eMail) {
+			this.eMail = eMail;
 		}
-
-		public long getPhone_number() {
-			return phone_number;
+		public long getPhoneNumber() {
+			return phoneNumber;
 		}
-
-		public void setPhone_number(long phone_number) {
-			this.phone_number = phone_number;
+		public void setPhoneNumber(long phoneNumber) {
+			this.phoneNumber = phoneNumber;
 		}
-
 		public String getGender() {
 			return gender;
 		}
-
 		public void setGender(String gender) {
 			this.gender = gender;
 		}
-
 		public String getAddress() {
 			return address;
 		}
-
 		public void setAddress(String address) {
 			this.address = address;
 		}
-
 }
