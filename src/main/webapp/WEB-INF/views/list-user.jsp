@@ -7,7 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>User List</title>
 </head>
-<body>
+<body background="user.png">
+<div style="width:100%" style="text-align: center;"> 
+<h1 style="color:Tomato" >LIST OF USERS</h1>  
 	<div id="table root">
 		<table>
 			<thead>
@@ -41,6 +43,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
+	</div>
 	</div>
 </body>
 </html>

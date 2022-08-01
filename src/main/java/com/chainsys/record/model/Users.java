@@ -1,10 +1,12 @@
-package com.chainsys.record.pojo;
+package com.chainsys.record.model;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 @Entity
+@Table(name="users")
 public class Users 
 {
 	@Id

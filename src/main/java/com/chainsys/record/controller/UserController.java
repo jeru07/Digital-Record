@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.record.pojo.Users;
+import com.chainsys.record.model.Users;
 import com.chainsys.record.service.UserService;
 
 
@@ -37,9 +37,9 @@ public class UserController
 		return "add-user-form";
 	}
     @PostMapping("/add")
-	public String addNewDoctors(@ModelAttribute("addusers") Users theuser) {
+	public String addNewUsers(@ModelAttribute("addusers") Users theuser) {
 	    userservice.save(theuser);
-		return "redirect:/user/list";
+		return "redirect:/document/addform";
     }
     @GetMapping("/updateform")
    	public String showUpdateForm(@RequestParam("userid") int id,Model model)
@@ -49,18 +49,17 @@ public class UserController
    		return "update-user-form";
    	}
        @PostMapping("/updateusers")
-   	public String updateDoctors(@ModelAttribute("updateusers") Users theuser) {
+   	public String updateUsers(@ModelAttribute("updateusers") Users theuser) {
    		userservice.save(theuser);
    		return "redirect:/user/list";
    	}
        @GetMapping("/deleteusers")
-      	public String deleteDoctor(@RequestParam("userid") int id) {
+      	public String deleteUsers(@RequestParam("userid") int id) {
          userservice.deleteById(id);
       		return "redirect:/user/list";
       	}
-
    	@GetMapping("/getuserbyid")
-   	public String getDoctor(@RequestParam("id") int id,Model model)
+   	public String getUsers(@RequestParam("id") int id,Model model)
    	{
    		Users theuser=userservice.findByid(id);
    		model.addAttribute("getuserbyid", theuser);

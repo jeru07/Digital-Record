@@ -1,4 +1,4 @@
-package com.chainsys.record.pojo;
+package com.chainsys.record.model;
 
 import java.io.File;
 import java.util.Date;

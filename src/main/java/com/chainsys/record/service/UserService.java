@@ -5,8 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.chainsys.record.pojo.Users;
-
+import com.chainsys.record.model.Users;
 import com.chainsys.record.repository.UserRepository;
 
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.record.pojo.Users;
+import com.chainsys.record.model.Users;
 
 public interface UserRepository extends CrudRepository<Users, Integer> 
 {
