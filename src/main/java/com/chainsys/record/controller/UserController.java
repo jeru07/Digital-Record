@@ -15,8 +15,6 @@ import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Users;
 import com.chainsys.record.service.UserService;
 
-
-
 @Controller
 @RequestMapping("/user")
 public class UserController 
@@ -31,7 +29,7 @@ public class UserController
 		return "list-user";
 }
 	@GetMapping("/addformuser")
-	public String showAddForm(Model model)
+	public String showAddUser(Model model)
 	{
 		Users theuser=new Users();
 		model.addAttribute("addusers", theuser);
@@ -43,7 +41,7 @@ public class UserController
 		return "redirect:/document/addformdocument";
     }
     @GetMapping("/updateformuser")
-   	public String showUpdateForm(@RequestParam("userid") int id,Model model)
+   	public String showUpdateUser(@RequestParam("userid") int id,Model model)
    	{
    		Users theuser=userService.findByid(id);
    		model.addAttribute("updateusers", theuser);
@@ -66,12 +64,12 @@ public class UserController
    		model.addAttribute("getuserbyid", theuser);
    		return "find-user-id-form";
    	}
-   	@GetMapping("/getuserdocument")
-   	public String getDocument(@RequestParam("id") int id ,Model model)
+   	@GetMapping("/getlistuserdocument")
+   	public String getDocumentUser(@RequestParam("id") int id ,Model model)
    	{
-   		UsersDocumentsDTO dto=userService.getUserDocument(id);
-   		model.addAttribute("getuser", dto.getUsers());
-   		model.addAttribute("doclist", dto.getDoclist());
+   		UsersDocumentsDTO userDocumentdto=userService.getUserDocument(id);
+   		model.addAttribute("getuser", userDocumentdto.getUsers());
+   		model.addAttribute("doclist", userDocumentdto.getDoclist());
    		return "list-user-document";
    	}
 }

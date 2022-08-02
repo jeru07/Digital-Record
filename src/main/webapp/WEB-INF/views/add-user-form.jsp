@@ -18,10 +18,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
-input[type=text], input[type=password],input[type=date] {
+input[type=text], input[type=password],input[type=date] 
+{
   width:250px;
   padding: 10px;
-  margin: 5px 0 22px 0;
+  margin: 10px 0 22px 0;
   display: inline-block;
   border-color: #f1f1f1;
 }
@@ -47,8 +48,8 @@ input[type=text], input[type=password],input[type=date] {
 					<form:input path="userId" type="text"/>
 				</div><br/>
 				<div>
-					<label for="userName">User Name:</label>
-					<form:input path="userName" type="text"/>
+				<label for="userName">User Name:</label> 
+				<form:input path="userName" type="text"/> 
 				</div><br/>
 				<div>
 					<label for="userPassword">User Password:</label>
