@@ -5,7 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 @Entity
 public class Documents {
 	@Id
@@ -26,6 +29,16 @@ public class Documents {
 	@Column(name="document_image")
 		private File documentImage;
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id" , nullable=false,insertable=false,updatable=false)
+	private Users users;
+	
+	public Users getUsers() {
+		return users;
+	}
+	public void setUsers(Users users) {
+		this.users = users;
+	}
 	public int getUserId() {
 		return userId;
 	}
@@ -74,7 +87,4 @@ public class Documents {
 	public void setDocumentImage(File documentImage) {
 		this.documentImage = documentImage;
 	}
-   
-
-   
 }

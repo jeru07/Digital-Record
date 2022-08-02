@@ -5,7 +5,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Document List</title>
+<title>LIST OF DOCUMENTS</title>
+<style>
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+  border-color: #96D4D4;
+}
+      </style>
 </head>
 <body>
 <div style="width:100%" style="text-align: center;"> 

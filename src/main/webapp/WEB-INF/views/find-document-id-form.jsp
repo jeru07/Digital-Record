@@ -61,7 +61,6 @@
 						<form:input path="documentImage" readonly="true"/>
 					</div>
 				</div>
-
 			</form:form>
 		</div>
 	</div>

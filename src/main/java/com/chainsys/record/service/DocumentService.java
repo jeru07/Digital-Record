@@ -11,24 +11,24 @@ import com.chainsys.record.repository.DocumentRepository;
 @Service
 public class DocumentService {
 	@Autowired
-	private DocumentRepository docrepo;
+	private DocumentRepository documentRepo;
 	
 	public List<Documents> getDocuments() {
-		List<Documents> listdoc=docrepo.findAll();
+		List<Documents> listdoc=documentRepo.findAll();
 		return listdoc;
 	}
 	public Documents save(Documents doc)
 	{
-		return docrepo.save(doc);
+		return documentRepo.save(doc);
 	}
 	public Documents findByid(int id)
 	{
-		return docrepo.findById(id);
+		return documentRepo.findById(id);
 	}
 
 	public void deleteById(int id) 
 	{
-		 docrepo.deleteById(id);
+		 documentRepo.deleteById(id);
 	}
 }
 

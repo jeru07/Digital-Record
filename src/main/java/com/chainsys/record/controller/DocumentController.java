@@ -12,18 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.record.model.Documents;
-import com.chainsys.record.model.Users;
 import com.chainsys.record.service.DocumentService;
 
 @Controller
 @RequestMapping("/document")
 public class DocumentController {
 	@Autowired
-	DocumentService docservice;
+	DocumentService documentService;
 
 	@GetMapping("/list")
 	public String getDocuments(Model model) {
-		List<Documents> thedoc = docservice.getDocuments();
+		List<Documents> thedoc = documentService.getDocuments();
 		model.addAttribute("alldocuments", thedoc);
 		return "list-document";
 	}
@@ -37,31 +36,31 @@ public class DocumentController {
 
 	@PostMapping("/add")
 	public String addNewDocuments(@ModelAttribute("adddocuments") Documents thedoc) {
-		docservice.save(thedoc);
+		documentService.save(thedoc);
 		return "redirect:/document/list";
 	}
 
 	@GetMapping("/updateformdocument")
 	public String showUpdateForm(@RequestParam("userid") int id, Model model) {
-		Documents thedoc = docservice.findByid(id);
+		Documents thedoc = documentService.findByid(id);
 		model.addAttribute("updatedocuments", thedoc);
 		return "update-document-form";
 	}
 
 	@PostMapping("/updatedocuments")
 	public String updateDocuments(@ModelAttribute("updatedocuments") Documents thedoc) {
-		docservice.save(thedoc);
+		documentService.save(thedoc);
 		return "redirect:/document/list";
 	}
 	@GetMapping("/deletedocuments")
   	public String deleteDocuments(@RequestParam("userid") int id) {
-     docservice.deleteById(id);
+     documentService.deleteById(id);
   		return "redirect:/document/list";
   	}
  	@GetMapping("/getdocumentbyid")
    	public String getUsers(@RequestParam("id") int id,Model model)
    	{
-   		Documents thedoc=docservice.findByid(id);
+   		Documents thedoc=documentService.findByid(id);
    		model.addAttribute("getdocumentbyid", thedoc);
    		return "find-document-id-form";
    	}

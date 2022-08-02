@@ -11,4 +11,5 @@ public interface DocumentRepository extends CrudRepository<Documents, Integer> {
 	  Documents save(Documents doc); // used for adding and updating
 	    void deleteById(int doc_id);
 	     List<Documents> findAll();
+	     List<Documents> findByUserId(int id);
 }

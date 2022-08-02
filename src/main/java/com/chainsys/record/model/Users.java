@@ -1,15 +1,19 @@
 package com.chainsys.record.model;
 
-import java.util.Date;
+import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name="users")
 public class Users 
 {
+	
 	@Id
 	@Column(name="user_id")
 	    private int userId;
@@ -32,6 +36,15 @@ public class Users
 	@Column(name="address")
 		private String address;
 	
+	@OneToMany(mappedBy="users",fetch= FetchType.LAZY )
+	private List<Documents> documents;
+	
+		public List<Documents> getDocuments() {
+		return documents;
+	}
+	public void setDocuments(List<Documents> documents) {
+		this.documents = documents;
+	}
 		public int getUserId() {
 			return userId;
 		}

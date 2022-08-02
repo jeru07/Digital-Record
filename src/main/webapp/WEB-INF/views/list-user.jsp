@@ -5,6 +5,14 @@
 <html>
 <head>
 <title>User List</title>
+ <style>
+         table, th, td {
+            border: 1px solid black;
+         }
+         th, td {
+  border-color: #96D4D4;
+}
+      </style>
 </head>
 <body>
 <div style="width:100%" style="text-align: center;"> 
