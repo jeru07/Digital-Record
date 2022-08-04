@@ -43,12 +43,12 @@ public class DocumentController {
 	@GetMapping("/updateformdocument")
 	public String showUpdateDocuments(@RequestParam("userid") int id, Model model) {
 		Documents thedoc = documentService.findByid(id);
-		model.addAttribute("updatedocuments", thedoc);
+		model.addAttribute("updateddocuments", thedoc);
 		return "update-document-form";
 	}
 
-	@PostMapping("/updatedocuments")
-	public String updateDocuments(@ModelAttribute("updatedocuments") Documents thedoc) {
+	@PostMapping("/updateddocuments")
+	public String updateDocuments(@ModelAttribute("updateddocuments") Documents thedoc) {
 		documentService.save(thedoc);
 		return "redirect:/document/list";
 	}
@@ -57,7 +57,7 @@ public class DocumentController {
      documentService.deleteById(id);
   		return "redirect:/document/list";
   	}
- 	@GetMapping("/getdocumentbyid")
+ 	@GetMapping("/getdocbyid")
    	public String getUsers(@RequestParam("id") int id,Model model)
    	{
    		Documents thedoc=documentService.findByid(id);

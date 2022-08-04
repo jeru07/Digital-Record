@@ -1,7 +1,7 @@
 package com.chainsys.record.model;
 
 import java.io.File;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,11 +11,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 @Entity
 public class Documents {
-	@Id
+	
 	@Column(name="user_id")
         private int userId;
 	@Column(name="document_name")
 		private String documentName;
+	@Id
 	@Column(name="document_id")
 		private int documentId;
 	@Column(name="issue_date")

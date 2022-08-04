@@ -72,4 +72,12 @@ public class UserController
    		model.addAttribute("doclist", userDocumentdto.getDoclist());
    		return "list-user-document";
    	}
+ 	@GetMapping("/getlistdocument")
+   	public String getDocument(@RequestParam("id") int id ,Model model)
+   	{
+   		UsersDocumentsDTO userDocumentdto=userService.getUserDocument(id);
+//      model.addAttribute("getuser", userDocumentdto.getUsers());
+   		model.addAttribute("doclist", userDocumentdto.getDoclist());
+   		return "update-document-form";
+   	}
 }

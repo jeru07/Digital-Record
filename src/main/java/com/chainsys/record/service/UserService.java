@@ -19,6 +19,7 @@ public class UserService {
 	private UserRepository userRepo;
 	@Autowired
 	private DocumentRepository documentRepo;
+	
 	public List<Users> getUsers() {
 		List<Users> listUs=userRepo.findAll();
 		return listUs;

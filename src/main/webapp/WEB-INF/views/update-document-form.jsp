@@ -11,8 +11,7 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="updatedocuments"
-				enctype="multipart/form-data"  style="margin: auto; width: 220px;">
+			<form:form action="" method="post" modelAttribute="doclist">
 				<div>
 					<label for="userId">User id</label>
 					<div>

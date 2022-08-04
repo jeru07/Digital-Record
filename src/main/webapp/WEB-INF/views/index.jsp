@@ -13,6 +13,5 @@
 <a href="/user/updateformuser">Updating Users</a><br/>
 <a href="/user/deleteusers">Delete Users</a><br/>
 <a href="/user/getuserbyid">Get Users</a><br/>
-
 </body>
 </html>

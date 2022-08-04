@@ -8,14 +8,16 @@
  <style>
          table, th, td {
             border: 1px solid black;
+            padding:15px;
+            text-align:left;
          }
          th, td {
   border-color: #96D4D4;
 }
+tr:hover {background-color: #D6EEEE;}
       </style>
 </head>
 <body>
-<div style="width:100%" style="text-align: center;"> 
 <h1 style="color:Tomato" >LIST OF USERS</h1>  
 	<div id="table root">
 		<table>

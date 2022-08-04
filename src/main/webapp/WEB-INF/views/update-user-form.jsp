@@ -7,6 +7,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update User</title>
+<style>
+
+body {
+ font-family: 'Open Sans', sans-serif, helvetica, Arial;
+ font-weight: 400;
+ font-size: 14px;
+ color: black;
+ /* body background image */
+ background-image: linear-gradient(to bottom, rgba(128, 128, 128, 0.541), rgba(204, 0, 255, 0.637)), url(image1.jpg);
+  
+}
+input[type=text], input[type=password],input[type=date] 
+{
+  width:100%;
+  padding: 10px;
+  margin: 10px 0 22px 0;
+  display: inline-block;
+  border-color: black;
+}
+</style>
 </head>
 <body>
 	<div id="root">

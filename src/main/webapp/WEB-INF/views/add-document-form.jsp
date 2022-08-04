@@ -7,64 +7,85 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Document</title>
+<style>
+body {
+	color: #5D6063;
+	background-color: #EAEDF0;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	line-height: 1.3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input[type=text], input[type=date], input[type=file] {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0 22px 0;
+	display: inline-block;
+	border-color: #f1f1f1;
+}
+
+.register {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+</style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="adddocuments"
-				enctype="multipart/form-data"  style="margin: auto; width: 220px;">
+			<h1>DOCUMENT DETAILS</h1>
+			<form:form action="add" method="post" modelAttribute="adddocuments">
 				<div>
 					<label for="userId">User id</label>
-					<div>
-						<form:input path="userId" />
-					</div>
+					<form:input path="userId" />
 				</div>
 				<div>
 					<label for="documentName">Document Name</label>
-					<div>
-						<form:input path="documentName" />
-					</div>
+					<form:input path="documentName" />
 				</div>
 				<div>
 					<label for="documentId">Document Id</label>
-					<div>
-						<form:input path="documentId" />
-					</div>
+					<form:input path="documentId" />
 				</div>
 				<div>
-					<label for="issueDate">Issue Date</label>
-					<div>
-						<form:input path="issueDate" />
-					</div>
+					<label for="issueDate">Issue Date</label> 
+					<input type="date"
+						id="issueDate" name="issueDate" type="text">
+					<%-- <form:input path="issueDate" /> --%>
 				</div>
 				<div>
-					<label for="validTill">VALID till</label>
-					<div>
-						<form:input path="validTill" />
-					</div>
+					<label for="validTill">VALID till</label> <input type="date"
+						id="validTill" name="validTill" type="text">
+					<%-- <form:input path="validTill" /> --%>
 				</div>
 				<div>
 					<label for="issuedBy">Issued By</label>
-					<div>
-						<form:input path="issuedBy" />
-					</div>
+					<form:input path="issuedBy" />
 				</div>
 				<div>
 					<label for="notes">Notes</label>
-					<div>
-						<form:input path="notes" />
-					</div>
+					<form:input path="notes" />
 				</div>
 				<div>
 					<label for="documentImage">Document Image</label>
-					<div>
-						<form:input path="documentImage" />
-					</div>
-					<input type="file" name="file" /> <br /> <input type="submit"
-						value="Upload File" />
+					<form:input path="documentImage" type='file' placeholder='file'
+						accept='audio/*,video/*,image/*' />
+					<!-- <input type="file"
+						id="documentImage" name="documentImage" type="file"> -->
+					<%-- <form:input path="documentImage" /> --%>
+					<!-- <input type="file" name="file" /> <br /> -->
 				</div>
 				<div>
-			   <form:button>Add New</form:button>
+					<form:button type="submit" class="register">Upload</form:button>
 				</div>
 			</form:form>
 		</div>

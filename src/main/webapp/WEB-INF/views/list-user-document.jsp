@@ -8,85 +8,68 @@
 <meta charset="ISO-8859-1">
 <title>USER DOCUMENT LIST</title>
 <style>
-table, th, td {
-	border: 1px solid black;
-	border-radius: 10px;
-	style="width:100%"
+body {
+  color: #FA0000;
+  position: relative;
+  background-color:#F7D7AF;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-th, td {
-	border-color: #8E44AD;
-	background-color: #96D4D4;
-	padding: 15px;
-	
-}
+  table,tb { width:100%; padding:15px;
+            text-align:left; position: relative;}
+   th,  td { border: solid 1px #777; padding: 15px; border-color: #8E44AD; } 
+   td{color:#000000})
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="getuser"
-				style="margin: auto; width: 220px;">
+			<form:form action="add" method="post" modelAttribute="getuser">
 				<div>
 					<label for="userId">User id</label>
-					<div>
-						<form:input path="userId" readonly="true" />
-					</div>
-				</div>
+				    <form:input path="userId" readonly="true" />
+				</div><br/>
 				<div>
 					<label for="userName">User Name</label>
-					<div>
 						<form:input path="userName" readonly="true" />
-					</div>
-				</div>
+					</div><br/>
 				<div>
 					<label for="userPassword">User Password</label>
-					<div>
 						<form:input path="userPassword" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="firstName">First Name</label>
-					<div>
 						<form:input path="firstName" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="lastName">Last Name</label>
-					<div>
 						<form:input path="lastName" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="dateOfBirth">Date of Birth</label>
-					<div>
 						<form:input path="dateOfBirth" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="eMail">E-mail</label>
-					<div>
 						<form:input path="eMail" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="phoneNumber">Phone Number</label>
-					<div>
 						<form:input path="phoneNumber" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="gender">Gender</label>
-					<div>
 						<form:input path="gender" readonly="true" />
-					</div>
-				</div>
+				</div><br/>
 				<div>
 					<label for="address">Address</label>
-					<div>
 						<form:input path="address" readonly="true" />
-					</div>
-				</div>
+					</div><br/>
 				<div></div>
 			</form:form>
 		</div>
@@ -94,14 +77,14 @@ th, td {
 			<table>
 				<thead>
 					<tr>
-						<th>USER ID</th>
-						<th>DOCUMENT NAME</th>
-						<th>DOCUMENT ID</th>
-						<th>ISSUE DATE</th>
-						<th>VALID TILL</th>
-						<th>ISSUED BY</th>
-						<th>NOTES</th>
-						<th>DOCUMENT IMAGE</th>
+						<th style="color:white; font-size:20pt;" >USER ID</th>
+						<th style="color:white; font-size:20pt;">DOCUMENT NAME</th>
+						<th style="color:white; font-size:20pt;">DOCUMENT ID</th>
+						<th style="color:white; font-size:20pt;">ISSUE DATE</th>
+						<th style="color:white; font-size:20pt;">VALID TILL</th>
+						<th style="color:white; font-size:20pt;">ISSUED BY</th>
+						<th style="color:white; font-size:20pt;">NOTES</th>
+						<th style="color:white; font-size:20pt;">DOCUMENT IMAGE</th>
 					</tr>
 				</thead>
 				<tbody>
