@@ -38,7 +38,7 @@ public class UserController
     @PostMapping("/add")
 	public String addNewUsers(@ModelAttribute("addusers") Users theuser) {
 	    userService.save(theuser);
-		return "redirect:/document/addformdocument";
+		return "redirect:/user/userlogin";
     }
     @GetMapping("/updateformuser")
    	public String showUpdateUser(@RequestParam("userid") int id,Model model)
@@ -76,8 +76,25 @@ public class UserController
    	public String getDocument(@RequestParam("id") int id ,Model model)
    	{
    		UsersDocumentsDTO userDocumentdto=userService.getUserDocument(id);
-//      model.addAttribute("getuser", userDocumentdto.getUsers());
+        model.addAttribute("getuser", userDocumentdto.getUsers());
    		model.addAttribute("doclist", userDocumentdto.getDoclist());
-   		return "update-document-form";
+   		return "list-all";
    	}
+ 	@GetMapping("/userlogin")
+    public String adminaccessform(Model model) {
+        Users theusers = new Users();
+        model.addAttribute("users", theusers);
+        return "user-login-form";
+    }                   
+
+    @PostMapping("/checkuserlogin")
+    public String checkingAccess(@ModelAttribute("users") Users user) {
+        Users users = userService.getUserByuserNameAnduserPassword(user.getUserName(),user.getUserPassword());
+        if (users!= null){
+
+            return "redirect:/document/addformdocument";
+        } else
+            return "invalid-user-error";
+
+    }
 }

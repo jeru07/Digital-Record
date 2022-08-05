@@ -12,4 +12,5 @@ public interface UserRepository extends CrudRepository<Users, Integer>
 	 Users save(Users dr); // used for adding and updating
 	    void deleteById(int user_id);
 	    List<Users> findAll();
+	    Users findByUserNameAndUserPassword(String name, String password);
 }

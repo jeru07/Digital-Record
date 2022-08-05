@@ -89,6 +89,7 @@ input[type=text], input[type=password],input[type=date]
 				</div><br/>
 				<div>
 					<form:button type="submit" class="register">ADD</form:button>
+					
 				</div>
 			</form:form>
 		</div>

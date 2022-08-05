@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Documents;
+import com.chainsys.record.model.Users;
+import com.chainsys.record.service.UserService;
 import com.chainsys.record.service.DocumentService;
 
 @Controller
@@ -19,7 +22,8 @@ import com.chainsys.record.service.DocumentService;
 public class DocumentController {
 	@Autowired
 	DocumentService documentService;
-
+	@Autowired
+	private UserService userservice;
 	@GetMapping("/list")
 	public String getDocuments(Model model) {
 		List<Documents> thedoc = documentService.getDocuments();
@@ -35,25 +39,33 @@ public class DocumentController {
 	}
 
 	@PostMapping("/add")
-	public String addNewDocuments(@ModelAttribute("adddocuments") Documents thedoc) {
+	public String addNewDocuments(@ModelAttribute("adddocuments") Documents thedoc,Model model) {
 		documentService.save(thedoc);
-		return "redirect:/document/list";
+		Users user=userservice.findByid(thedoc.getUserId());
+		model.addAttribute("getuser", user);
+		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
+		model.addAttribute("doclist", dto.getDoclist());
+		return "list-user-document";
 	}
 
 	@GetMapping("/updateformdocument")
-	public String showUpdateDocuments(@RequestParam("userid") int id, Model model) {
+	public String showUpdateDocuments(@RequestParam("id") int id, Model model) {
 		Documents thedoc = documentService.findByid(id);
 		model.addAttribute("updateddocuments", thedoc);
 		return "update-document-form";
 	}
 
 	@PostMapping("/updateddocuments")
-	public String updateDocuments(@ModelAttribute("updateddocuments") Documents thedoc) {
+	public String updateDocuments(@ModelAttribute("updateddocuments") Documents thedoc,Model model) {
 		documentService.save(thedoc);
-		return "redirect:/document/list";
+		Users user=userservice.findByid(thedoc.getUserId());
+		model.addAttribute("getuser", user);
+		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
+		model.addAttribute("doclist", dto.getDoclist());
+		return "list-user-document";
 	}
 	@GetMapping("/deletedocuments")
-  	public String deleteDocuments(@RequestParam("userid") int id) {
+  	public String deleteDocuments(@RequestParam("id") int id) {
      documentService.deleteById(id);
   		return "redirect:/document/list";
   	}
