@@ -3,6 +3,8 @@ package com.chainsys.record.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Documents;
@@ -40,7 +43,10 @@ public class DocumentController {
 
 	@PostMapping("/add")
 	public String addNewDocuments(@ModelAttribute("adddocuments") Documents thedoc,Model model) {
+		System.out.println(thedoc.getDocumentImage().length());
+		System.out.println(thedoc.getDocumentImage().getName());
 		documentService.save(thedoc);
+		
 		Users user=userservice.findByid(thedoc.getUserId());
 		model.addAttribute("getuser", user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
@@ -76,4 +82,13 @@ public class DocumentController {
    		model.addAttribute("getdocumentbyid", thedoc);
    		return "find-document-id-form";
    	}
+ 	@ResponseBody
+ 	@GetMapping("/getimage")
+ 	public ResponseEntity<byte[]> getImage(@RequestParam("id") int id)
+ 	{
+ 		byte[] imageBytes=documentService.getDocumentImageByteArray(id);
+ 		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);
+ 		
+ 	}
+ 	
 }

@@ -79,10 +79,7 @@ input[type=text], input[type=date], input[type=file] {
 					<label for="documentImage">Document Image</label>
 					<form:input path="documentImage" type='file' placeholder='file'
 						accept='audio/*,video/*,image/*' />
-					<!-- <input type="file"
-						id="documentImage" name="documentImage" type="file"> -->
-					<%-- <form:input path="documentImage" /> --%>
-					<!-- <input type="file" name="file" /> <br /> -->
+						
 				</div>
 				<div>
 					<form:button type="submit" class="register">Upload</form:button>

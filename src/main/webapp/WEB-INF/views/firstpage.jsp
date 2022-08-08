@@ -89,8 +89,13 @@ body {
 <body>
 	<a href="/document/addformdocument">
 	<button class="button">USER</button></a>
-	<button class="button1">ADMIN</button>
-	<button class="signin">SIGNIN</button>
+	
+	<a href="/admin/adminform">
+	<button class="button1">ADMIN</button></a>
+	
+	<a href="/user/userlogin">
+	<button class="signin">SIGNIN</button></a>
+	
 	<a href="/user/addformuser">
 	<button class="signup">SIGNUP</button></a>
 </body>

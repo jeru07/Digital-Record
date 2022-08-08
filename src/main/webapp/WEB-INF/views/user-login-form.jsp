@@ -82,7 +82,8 @@
 					<form:input path="userPassword" type="password" />
 				</div><br/>
 				<div>
-					<form:button type="submit" class="register">DONE</form:button>
+				<a href="/user/addformuser">
+					<form:button type="submit" class="register">DONE</form:button></a>
 				</div>
 			</form:form>
 			</div>

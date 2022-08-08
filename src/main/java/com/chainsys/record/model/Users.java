@@ -14,6 +14,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -30,7 +32,9 @@ public class Users
 	@NotNull(message="Username is required")
 		private String userName;
 	@Column(name="user_password")
-	@NotNull(message = "Password must contains atleast 8 digits")
+	@Size(max = 20, min = 8, message = "*Password length should be 8 to 20")
+//    @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "pattern:Welcome@12")
+	@NotNull(message="Password is required")
 		private String userPassword;
 	@Column(name="first_name")
 	@NotNull(message="Firstname is required")
@@ -53,7 +57,6 @@ public class Users
 	@Column(name="address")
 	@NotNull(message="Address is required")
 		private String address;
-	
 	@OneToMany(mappedBy="users",fetch= FetchType.LAZY )
 	private List<Documents> documents;
 	

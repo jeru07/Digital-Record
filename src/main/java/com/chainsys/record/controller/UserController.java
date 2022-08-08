@@ -2,9 +2,12 @@ package com.chainsys.record.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +31,7 @@ public class UserController
 		model.addAttribute("allusers",theuser);
 		return "list-user";
 }
+	
 	@GetMapping("/addformuser")
 	public String showAddUser(Model model)
 	{
@@ -36,9 +40,15 @@ public class UserController
 		return "add-user-form";
 	}
     @PostMapping("/add")
-	public String addNewUsers(@ModelAttribute("addusers") Users theuser) {
+	public String addNewUsers(@Valid@ModelAttribute("addusers") Users theuser,Errors errors) {
+    	if(errors.hasErrors())
+    	{
+    		return "add-user-form";
+    	}
+    	else {
 	    userService.save(theuser);
 		return "redirect:/user/userlogin";
+    	}
     }
     @GetMapping("/updateformuser")
    	public String showUpdateUser(@RequestParam("userid") int id,Model model)
@@ -95,9 +105,7 @@ public class UserController
             return "redirect:/document/addformdocument";
         } else
             return "invalid-user-error";
-
     }
-        
     @GetMapping("/first")
 	private String firstPage()
 	{
