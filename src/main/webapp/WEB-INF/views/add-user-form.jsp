@@ -17,6 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+   background-image: url('https://media.istockphoto.com/photos/abstract-multi-colored-bokeh-background-lights-at-night-autumn-fall-picture-id1182650732?b=1&k=20&m=1182650732&s=170667a&w=0&h=5LphKncEWNAHpwTXphq9gi0Ix5aDHk22eXgKvtuWR8o=');
+	 background-repeat: no-repeat;
+      background-attachment: fixed;
+       background-size: 100% 100%;
 }
 input[type=text], input[type=password],input[type=date] 
 {

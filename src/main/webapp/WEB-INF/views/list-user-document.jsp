@@ -18,6 +18,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width:100%;
+	 background-image: url('https://c0.wallpaperflare.com/preview/691/447/754/background-flower-bokeh-spring.jpg');
+	 background-repeat: no-repeat;
+      background-attachment: fixed;
+       background-size: 100% 100%;
 }
 
 table, tb {
@@ -25,6 +30,7 @@ table, tb {
 	padding: 15px;
 	text-align: left;
 	position: relative;
+	font-weighht:bold;
 }
 
 th, td {
@@ -32,21 +38,55 @@ th, td {
 	padding: 15px;
 	border-color: #8E44AD;
 }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=text]
+{
+  width:20%;
+  padding: 10px;
+ /*  margin: 10px 0 22px 0;
+  display: inline-block; */
+  border-color: black;
+  font-size:17px;
+}
+label {
+color: #000080;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+text-align:center;
+font-size: 20px;
+}
 
 td {
 	color: #000000
 }
-)
+tr:hover {background-color: #D6EEEE;}
+
 .button1:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	box-shadow:0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
 }
 
 .button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
 }
 </style>
 </head>
 <body>
+<h1 style="color:#000080">RECORD DETAILS</h1>  
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getuser">
@@ -131,17 +171,20 @@ td {
 							<td>${docu.notes}</td>
 							<td>${docu.documentImage}</td>
 							<td><a
-								href="/document/updateformdocument?id=${docu.documentId}">
-								<input type="button"
-									onclick="change()"  value="UPDATE" class="button1" id="myButton1"></input></a></td>
+								href="/document/updateformdocument?id=${docu.documentId}"> <input
+									type="button" onclick="change()" value="UPDATE" class="button1"
+									id="myButton1"></input></a></td>
 							<td><a
-								href="/document/deletedocuments?id=${docu.documentId}"><input type="button"
-							onclick="change()"  value="DELETE"  class="button2"  id="myButton2"></input></a></td>
+								href="/document/deletedocuments?id=${docu.documentId}"><input
+									type="button" onclick="change()" value="DELETE" class="button2"
+									id="myButton2"></input></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
 			</table>
-		
+			<a href="/document/addformdocument">
+				<button class="button">ADD NEW DOCUMENT</button>
+			</a>
 		</div>
 	</div>
 </body>

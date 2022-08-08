@@ -45,7 +45,7 @@ public class DocumentController {
 		model.addAttribute("getuser", user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
 		model.addAttribute("doclist", dto.getDoclist());
-		return "list-user-document";
+        return "list-user-document";
 	}
 
 	@GetMapping("/updateformdocument")

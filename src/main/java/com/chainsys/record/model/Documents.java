@@ -9,25 +9,37 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 @Entity
 public class Documents {
 	
 	@Column(name="user_id")
+	@Min(value = 1,message="Enter a valid Id between 1 to 100")
+	@Max(value = 100,message="Enter a valid Id between 1 to 100")
         private int userId;
 	@Column(name="document_name")
+	@NotNull(message="Documentname is required")
 		private String documentName;
 	@Id
 	@Column(name="document_id")
+	@Digits(integer = 100, fraction = 0)
 		private int documentId;
 	@Column(name="issue_date")
+	@NotNull(message="Correct date format is required ")
 		private Date issueDate;
 	@Column(name="valid_till")
+	@NotNull(message="Correct date format is required ")
 		private Date validTill;
 	@Column(name="issued_by")
+	@NotNull(message="IssuedBy is required")
 		private String issuedBy;
 	@Column(name="notes")
 		private String notes;
 	@Column(name="document_image")
+	@NotNull(message="Image is required")
 		private File documentImage;
 	
 	@ManyToOne(fetch=FetchType.LAZY)

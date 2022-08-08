@@ -9,6 +9,13 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+
 @Entity
 @Table(name="users")
 public class Users 
@@ -16,24 +23,35 @@ public class Users
 	
 	@Id
 	@Column(name="user_id")
-	    private int userId;
+	@Min(value = 1,message="Enter a valid Id between 1 to 100")
+	@Max(value = 100,message="Enter a valid Id between 1 to 100")
+	 private int userId;
 	@Column(name="user_name")
+	@NotNull(message="Username is required")
 		private String userName;
 	@Column(name="user_password")
+	@NotNull(message = "Password must contains atleast 8 digits")
 		private String userPassword;
 	@Column(name="first_name")
+	@NotNull(message="Firstname is required")
 		private String firstName;
 	@Column(name="last_name")
+	@NotNull(message="Lastname is required")
 		private String lastName;
 	@Column(name="dob")
+	@NotNull(message="Correct date format is required ")
 		private Date dateOfBirth;
 	@Column(name="e_mail")
+	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 		private String eMail;
 	@Column(name="phone_number")
+	@Digits(integer = 10, fraction = 0)
 		private long phoneNumber;
 	@Column(name="gender")
+	@NotNull(message="Gender is required")
 		private String gender;
 	@Column(name="address")
+	@NotNull(message="Address is required")
 		private String address;
 	
 	@OneToMany(mappedBy="users",fetch= FetchType.LAZY )

@@ -97,4 +97,16 @@ public class UserController
             return "invalid-user-error";
 
     }
+        
+    @GetMapping("/first")
+	private String firstPage()
+	{
+		return "firstpage";
+	}
+    @GetMapping("/home")
+   	private String homePage()
+   	{
+   		return "homepage";
+   	}
+    
 }
