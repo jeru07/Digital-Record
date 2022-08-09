@@ -17,6 +17,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-image:
+		url('https://img.freepik.com/free-vector/watercolor-nature-background-with-leaves_52683-59449.jpg?w=2000');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 
 input[type=text], input[type=date], input[type=file] {
@@ -46,40 +51,49 @@ input[type=text], input[type=date], input[type=file] {
 			<form:form action="add" method="post" modelAttribute="adddocuments">
 				<div>
 					<label for="userId">User id</label>
-					<form:input path="userId" />
+					<form:input path="userId" type="text" title="Id must be number" 
+                        pattern="^[0-9]+$"  required="true" />
+                    <form:errors  path ="userId" cssClass="text-danger"/>    
 				</div>
 				<div>
 					<label for="documentName">Document Name</label>
-					<form:input path="documentName" />
+					<form:input path="documentName" type="text" title="Name can't be empty And User Name must be in String"
+                         required="true" />
+                     <form:errors  path ="documentName" cssClass="text-danger"/>   
 				</div>
 				<div>
 					<label for="documentId">Document Id</label>
-					<form:input path="documentId" />
+					<form:input path="documentId" type="text" title="Id must be number" 
+                          required="true"/>
+                      <form:errors  path ="documentId" cssClass="text-danger"/>   
 				</div>
 				<div>
 					<label for="issueDate">Issue Date</label> 
 					<input type="date"
 						id="issueDate" name="issueDate" type="text">
-					<%-- <form:input path="issueDate" /> --%>
+						<form:errors  path ="issueDate" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="validTill">VALID till</label> <input type="date"
 						id="validTill" name="validTill" type="text">
-					<%-- <form:input path="validTill" /> --%>
+						<form:errors  path ="validTill" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="issuedBy">Issued By</label>
-					<form:input path="issuedBy" />
+					<form:input path="issuedBy" type="text" title="Name can't be empty And User Name must be in String"
+                         required="true" />
+                        <form:errors  path ="issuedBy" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="notes">Notes</label>
-					<form:input path="notes" />
+					<form:input path="notes" type="text" title="Name can't be empty And User Name must be in String"
+                    required="true"/>
+					<form:errors  path ="notes" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="documentImage">Document Image</label>
 					<form:input path="documentImage" type='file' placeholder='file'
 						accept='audio/*,video/*,image/*' />
-						
 				</div>
 				<div>
 					<form:button type="submit" class="register">Upload</form:button>

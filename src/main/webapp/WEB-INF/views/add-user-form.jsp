@@ -62,13 +62,13 @@ input[type=text], input[type=password], input[type=date] {
 				<div>
 					<label for="userName">User Name:</label>
 					<form:input path="userName" type="text" title="Name can't be empty And User Name must be in String"
-                        pattern="^[A-Za-z]\\w{3,20}$" required="true"/>
+                         required="true"/>
 					<form:errors  path ="userName" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="userPassword">User Password:</label>
 					<form:input path="userPassword" type="password"  title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
-                        pattern="^(?=.[A-Za-z])(?=.\\d)(?=.[@$!%#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
+                        
                         required="true" />
 					<form:errors  path ="userPassword" cssClass="text-danger"/>
 				</div>
@@ -76,14 +76,14 @@ input[type=text], input[type=password], input[type=date] {
 					<label for="firstName">First Name: </label>
 					<form:input path="firstName" type="text" 
                         title="Name can't be empty And User Name must be in String"
-                        pattern="^[A-Za-z]\\w{3,20}$" required="true"/>
+                         required="true"/>
 					<form:errors  path ="firstName" cssClass="text-danger"/>
 				</div>
 				<div>
 					<label for="lastName">Last Name: </label>
 					<form:input path="lastName" type="text"
                         title="Name can't be empty And User Name must be in String"
-                        pattern="^[A-Za-z]\\w{3,20}$" required="true"/>
+                         required="true"/>
 					<form:errors  path ="lastName" cssClass="text-danger"/>
 				</div>
 				<div>

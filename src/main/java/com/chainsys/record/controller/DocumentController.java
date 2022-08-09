@@ -46,7 +46,6 @@ public class DocumentController {
 		System.out.println(thedoc.getDocumentImage().length());
 		System.out.println(thedoc.getDocumentImage().getName());
 		documentService.save(thedoc);
-		
 		Users user=userservice.findByid(thedoc.getUserId());
 		model.addAttribute("getuser", user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
@@ -71,10 +70,14 @@ public class DocumentController {
 		return "list-user-document";
 	}
 	@GetMapping("/deletedocuments")
-  	public String deleteDocuments(@RequestParam("id") int id) {
-     documentService.deleteById(id);
-  		return "redirect:/document/list";
+  	public String deleteDocuments(@RequestParam("id") int id,Model model) {
+        Documents thedoc = documentService.findByid(id);
+		Users user=userservice.findByid(thedoc.getUserId());
+		model.addAttribute("getuser", user);
+		 documentService.deleteById(id);
+		return "list-user-document";
   	}
+	
  	@GetMapping("/getdocbyid")
    	public String getUsers(@RequestParam("id") int id,Model model)
    	{
