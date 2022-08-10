@@ -31,6 +31,19 @@ input[type=text], input[type=date], input[type=file] {
 	display: inline-block;
 	border-color: #f1f1f1;
 }
+select {
+
+  appearance: none;
+  background-color: transparent;
+  border-color:black;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
 
 .register {
 	background-color: #04AA6D;
@@ -50,56 +63,74 @@ input[type=text], input[type=date], input[type=file] {
 			<h1>DOCUMENT DETAILS</h1>
 			<form:form action="add" method="post" modelAttribute="adddocuments">
 				<div>
-					<label for="userId">User id</label>
-					<form:input path="userId" type="text" title="Id must be number" 
-                        pattern="^[0-9]+$"  required="true" />
-                    <form:errors  path ="userId" cssClass="text-danger"/>    
-				</div>
-				<div>
+				<div class="custom-select" style="width:500px;">
 					<label for="documentName">Document Name</label>
-					<form:input path="documentName" type="text" title="Name can't be empty And User Name must be in String"
-                         required="true" />
-                     <form:errors  path ="documentName" cssClass="text-danger"/>   
+					<td><form:select path="documentName">
+							<form:errors path="documentName" required="true" />
+							<option>-------Select Your Document----------</option>
+							<form:option value="aadhar">Aadhar</form:option>
+							<form:option value="license">Driving License</form:option>
+							<form:option value="pan">Permanent Account Number(PAN)</form:option>
+							<form:option value="voterid">Voter ID</form:option>
+							<form:option value="Marksheet">Educational Certificate</form:option>
+							<form:option value="passport">Passport</form:option>
+							<form:option value="ration">Ration Card</form:option>
+							<form:option value="atmnumber">ATM Card Number</form:option>
+							<form:option value="passport">PassBook</form:option>
+							<form:option value="birth">Birth Certificate</form:option>
+							<form:option value="covid">Covid Vaccination Certificate</form:option>
+						</form:select></td>
+						</div>
 				</div>
-				<div>
-					<label for="documentId">Document Id</label>
-					<form:input path="documentId" type="text" title="Id must be number" 
-                          required="true"/>
-                      <form:errors  path ="documentId" cssClass="text-danger"/>   
-				</div>
-				<div>
-					<label for="issueDate">Issue Date</label> 
-					<input type="date"
-						id="issueDate" name="issueDate" type="text">
-						<form:errors  path ="issueDate" cssClass="text-danger"/>
-				</div>
-				<div>
-					<label for="validTill">VALID till</label> <input type="date"
-						id="validTill" name="validTill" type="text">
-						<form:errors  path ="validTill" cssClass="text-danger"/>
-				</div>
-				<div>
-					<label for="issuedBy">Issued By</label>
-					<form:input path="issuedBy" type="text" title="Name can't be empty And User Name must be in String"
-                         required="true" />
-                        <form:errors  path ="issuedBy" cssClass="text-danger"/>
-				</div>
-				<div>
-					<label for="notes">Notes</label>
-					<form:input path="notes" type="text" title="Name can't be empty And User Name must be in String"
-                    required="true"/>
-					<form:errors  path ="notes" cssClass="text-danger"/>
-				</div>
-				<div>
-					<label for="documentImage">Document Image</label>
-					<form:input path="documentImage" type='file' placeholder='file'
-						accept='audio/*,video/*,image/*' />
-				</div>
-				<div>
-					<form:button type="submit" class="register">Upload</form:button>
-				</div>
-			</form:form>
+				<form:errors path="documentName" cssClass="text-danger" />
 		</div>
+		<div>
+			<label for="documentId">Document Id</label>
+			<form:input path="documentId" type="text" title="Id must be number"
+				required="true" />
+			<form:errors path="documentId" cssClass="text-danger" />
+		</div>
+		<div>
+			<label for="issueDate">Issue Date</label> <input type="date"
+				id="issueDate" name="issueDate" type="text">
+			<form:errors path="issueDate" cssClass="text-danger" />
+		</div>
+		<div>
+			<label for="validTill">VALID till</label> <input type="date"
+				id="validTill" name="validTill" type="text">
+			<form:errors path="validTill" cssClass="text-danger" />
+		</div>
+		<div>
+		<div class="custom-select" style="width:500px;">
+			<label for="issuedBy">Issued By</label>
+			<td><form:select path="issuedBy">
+							<form:errors path="issuedBy" required="true" />
+							<option>-------Select Issuing Department-------------------</option>
+							<form:option value="aadhar">Central Government</form:option>
+							<form:option value="license">International</form:option>
+							<form:option value="pan">School/College</form:option>
+							<form:option value="voterid">Hospital</form:option>
+							<form:option value="Marksheet">Government</form:option>
+							<form:option value="ration">Bank</form:option>
+						</form:select></td>
+						</div>
+		</div><br/>
+		<div>
+			<label for="notes">Notes</label>
+			<form:input path="notes" type="text"
+				title="Name can't be empty And User Name must be in String" />
+			<form:errors path="notes" cssClass="text-danger" />
+		</div>
+		<div>
+			<label for="documentImage">Document Image</label>
+			<form:input path="documentImage" type='file' placeholder='file'
+				accept='audio/*,video/*,image/*' />
+		</div>
+		<div>
+			<form:button type="submit" class="register">Upload</form:button>
+		</div>
+		</form:form>
+	</div>
 	</div>
 </body>
 </html>

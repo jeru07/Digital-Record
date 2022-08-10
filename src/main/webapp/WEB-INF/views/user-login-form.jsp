@@ -59,7 +59,7 @@ form {
 </head>
 <body>
 	<h1>User Login</h1>
-	
+
 
 		<div id="root">
 			<div id="form">
@@ -83,5 +83,6 @@ form {
 				</form:form>
 			</div>
 		</div>
+	
 </body>
 </html>

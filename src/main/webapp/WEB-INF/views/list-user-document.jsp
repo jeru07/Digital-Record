@@ -91,21 +91,6 @@ tr:hover {background-color: #D6EEEE;}
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getuser">
 				<div>
-					<label for="userId">User id</label>
-					<form:input path="userId" readonly="true" />
-				</div>
-				<br />
-				<div>
-					<label for="userName">User Name</label>
-					<form:input path="userName" readonly="true" />
-				</div>
-				<br />
-				<div>
-					<label for="userPassword">User Password</label>
-					<form:input path="userPassword" readonly="true" />
-				</div>
-				<br />
-				<div>
 					<label for="firstName">First Name</label>
 					<form:input path="firstName" readonly="true" />
 				</div>
@@ -115,11 +100,7 @@ tr:hover {background-color: #D6EEEE;}
 					<form:input path="lastName" readonly="true" />
 				</div>
 				<br />
-				<div>
-					<label for="dateOfBirth">Date of Birth</label>
-					<form:input path="dateOfBirth" readonly="true" />
-				</div>
-				<br />
+			
 				<div>
 					<label for="eMail">E-mail</label>
 					<form:input path="eMail" readonly="true" />
@@ -130,11 +111,7 @@ tr:hover {background-color: #D6EEEE;}
 					<form:input path="phoneNumber" readonly="true" />
 				</div>
 				<br />
-				<div>
-					<label for="gender">Gender</label>
-					<form:input path="gender" readonly="true" />
-				</div>
-				<br />
+				
 				<div>
 					<label for="address">Address</label>
 					<form:input path="address" readonly="true" />
@@ -155,8 +132,8 @@ tr:hover {background-color: #D6EEEE;}
 						<th style="color: white; font-size: 15pt;">ISSUED BY</th>
 						<th style="color: white; font-size: 15pt;">NOTES</th>
 						<th style="color: white; font-size: 15pt;">DOCUMENT IMAGE</th>
-						<th style="color: white; font-size: 15pt;">UPDATE</th>
-						<th style="color: white; font-size: 15pt;">DELETE</th>
+						<th style="color: white; font-size: 15pt;">ACTION</th>
+						
 					</tr>
 				</thead>
 				<tbody>
@@ -173,9 +150,8 @@ tr:hover {background-color: #D6EEEE;}
 							<td><a
 								href="/document/updateformdocument?id=${docu.documentId}"> <input
 									type="button" onclick="change()" value="UPDATE" class="button1"
-									id="myButton1"></input></a></td>
-							<td><a
-								href="/document/deletedocuments?id=${docu.documentId}"><input
+									id="myButton1"></input></a>
+									<a href="/document/deletedocuments?id=${docu.documentId}"><input
 									type="button" onclick="change()" value="DELETE" class="button2"
 									id="myButton2"></input></a></td>
 						</tr>

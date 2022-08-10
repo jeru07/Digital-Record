@@ -57,14 +57,14 @@ td {
 					<tr>
 						<th style="color: white; font-size: 20pt;">USER ID</th>
 						<th style="color: white; font-size: 20pt;">DOCUMENT NAME</th>
-						<th style="color: white; font-size: 20pt;">DOCUMENT ID</th>
+						<!-- <th style="color: white; font-size: 20pt;">DOCUMENT ID</th>
 						<th style="color: white; font-size: 20pt;">ISSUE DATE</th>
 						<th style="color: white; font-size: 20pt;">VALID TILL</th>
 						<th style="color: white; font-size: 20pt;">ISSUED BY</th>
 						<th style="color: white; font-size: 20pt;">NOTES</th>
 						<th style="color: white; font-size: 20pt;">DOCUMENT IMAGE</th>
 						<th>Update</th>
-						<th>Delete</th>
+						<th>Delete</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -72,17 +72,13 @@ td {
 						<tr>
 							<td>${docu.userId}</td>
 							<td>${docu.documentName}</td>
-							<td>${docu.documentId}</td>
+							<%-- <td>${docu.documentId}</td>
 							<td>${docu.issueDate}</td>
 							<td>${docu.validTill}</td>
 							<td>${docu.issuedBy}</td>
 							<td>${docu.notes}</td>
-							<td>${docu.documentImage}</td>
-							<td><a
-								href="/document/updateformdocument?id=${docu.documentId}"><input
-									onclick="change()" type="button" value="Update" id="myButton1"></input></a></td>
-							<td><a href="/document/deletedocuments?id=${docu.documentId}"><input
-									onclick="change()" type="button" value="DELETE" id="myButton2"></input></a></td>
+							<td>${docu.documentImage}</td> --%>
+							
 						</tr>
 					</c:forEach>
 				</tbody>

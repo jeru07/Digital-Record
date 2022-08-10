@@ -6,8 +6,11 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
@@ -24,9 +27,9 @@ public class Users
 {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "user_id")
+    @SequenceGenerator(name = "user_id", sequenceName = "user_id",  allocationSize = 1)
 	@Column(name="user_id")
-	@Min(value = 1,message="Enter a valid Id between 1 to 100")
-	@Max(value = 100,message="Enter a valid Id between 1 to 100")
 	 private int userId;
 	@Column(name="user_name")
 	@NotNull(message="Username is required")
@@ -49,7 +52,7 @@ public class Users
 	@Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}")
 		private String eMail;
 	@Column(name="phone_number")
-	@Digits(integer = 10, fraction = 0)
+	@NotNull
 		private long phoneNumber;
 	@Column(name="gender")
 	@NotNull(message="Gender is required")
