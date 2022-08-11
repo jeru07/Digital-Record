@@ -165,7 +165,7 @@ tr:hover {
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="/document/addformdocument?id=${userId}">
+			<a href="/document/addformdocument?userId=${userId}">
 				<button class="button">ADD NEW DOCUMENT</button>
 			</a>
 		</div>

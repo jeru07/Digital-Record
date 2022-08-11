@@ -44,7 +44,7 @@ public class DocumentController {
 		Documents thedoc = new Documents();
 		model.addAttribute("adddocuments", thedoc);
 		model.addAttribute("userId", thedoc.getUserId());
-		thedoc.getUserId();
+		thedoc.setUserId(id);
 		return "add-document-form";
 	}
 
@@ -72,7 +72,7 @@ public class DocumentController {
 	}
 
 	@GetMapping("/updateformdocument")
-	public String showUpdateDocuments(@RequestParam("id") int id, Model model) {
+	public String showUpdateDocuments(@RequestParam("userId") int id, Model model) {
 		Documents thedoc = documentService.findByid(id);
 		model.addAttribute("updateddocuments", thedoc);
 		thedoc.getUserId();
