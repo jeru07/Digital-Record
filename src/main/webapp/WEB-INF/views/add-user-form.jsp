@@ -52,34 +52,34 @@ input[type=text], input[type=password], input[type=date] {
 	<div id="root">
 		<div id="form">
 			<h1>USER DETAILS</h1>
-			<form:form action="add" method="post" modelAttribute="addusers">
+			<form:form name="myForm" onsubmit="return validateForm()" action="add" method="post" modelAttribute="addusers">
 				<div>
 					<label for="userName">User Name:</label>
 					<form:input path="userName" type="text"
-						title="Name can't be empty And User Name must be in String"
-						required="true" placeholder="enter username"/>
+						title="Name can't be empty And User Name must be in alphabets"
+						required="true"  placeholder="enter username"/>
 					<form:errors path="userName" cssClass="text-danger" />
 				</div>
 				<div>
 					<label for="userPassword">User Password:</label>
 					<form:input path="userPassword" type="password"
 						title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
-						required="true" placeholder="Thinkpad@12" />
+						required="true"  placeholder="Thinkpad@12" />
 						
 					<form:errors path="userPassword" cssClass="text-danger" />
 				</div>
 				<div>
 					<label for="firstName">First Name: </label>
 					<form:input path="firstName" type="text"
-						title="Name can't be empty And User Name must be in String"
-						required="true" placeholder="enter yout first name"  />
+						title="Name can't be empty And User Name must be in alphabets"
+						required="true"  placeholder="enter yout first name"  />
 					<form:errors path="firstName" cssClass="text-danger" />
 				</div>
 				<div>
 					<label for="lastName">Last Name: </label>
 					<form:input path="lastName" type="text"
-						title="Name can't be empty And User Name must be in String"
-						required="true" placeholder="enter your last name"/>
+						title="Name can't be empty And User Name must be in alphabets"
+						required="true"  placeholder="enter your last name"/>
 					<form:errors path="lastName" cssClass="text-danger" />
 				</div>
 				<div>
@@ -98,7 +98,7 @@ input[type=text], input[type=password], input[type=date] {
 				</div>
 				<div>
 					<label for="phoneNumber">Phone Number: </label>
-					<form:input path="phoneNumber" type="text" id="phone"
+					<form:input path="phoneNumber" type="text"
 					title="phone number is not in correct format"
 						placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
 					<br>
@@ -122,5 +122,5 @@ input[type=text], input[type=password], input[type=date] {
 			</form:form>
 		</div>
 	</div>
-</body>
+	</body>
 </html>

@@ -19,6 +19,7 @@ body {
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
+
 form {
 	background-color: #fff;
 	box-align: center;
@@ -61,28 +62,31 @@ form {
 	<h1>User Login</h1>
 
 
-		<div id="root">
-			<div id="form">
+	<div id="root">
+		<div id="form">
 
-				<form:form action="checkuserlogin" method="post"
-					modelAttribute="users">
-					<div>
-						<label for="userName">User Name:</label>
-						<form:input path="userName" type="text" />
-					</div>
-					<br />
-					<div>
-						<label for="userPassword">User Password:</label>
-						<form:input path="userPassword" type="password" />
-					</div>
-					<br />
-					<div>
-						 <form:button type="submit"
-								class="register">DONE</form:button>
-					</div>
-				</form:form>
-			</div>
+			<form:form action="checkuserlogin" method="post"
+				modelAttribute="users">
+				<div>
+					<label for="userName">User Name:</label>
+					<form:input path="userName" type="text" />
+				</div>
+				<br />
+				<div>
+					<label for="userPassword">Password:</label>
+					<form:input path="userPassword" type="password" />
+				</div>
+				<br />
+				<div>
+					<form:button class="register">DONE</form:button>
+				</div>
+
+			</form:form>
+			<a href="/user/addformuser">
+						<button type="submit"
+								class="register">SIGN UP</button></a>
 		</div>
-	
+	</div>
+		<div>${result}</div>
 </body>
 </html>

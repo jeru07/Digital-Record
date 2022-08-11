@@ -47,7 +47,7 @@ public class UserController
     	}
     	else {
 	    userService.save(theuser);
-		return "redirect:/user/userlogin";
+		return "redirect:/user/getlistuserdocument?id="+theuser.getUserId();
     	}
     }
     @GetMapping("/updateformuser")
@@ -80,6 +80,7 @@ public class UserController
    		UsersDocumentsDTO userDocumentdto=userService.getUserDocument(id);
    		model.addAttribute("getuser", userDocumentdto.getUsers());
    		model.addAttribute("doclist", userDocumentdto.getDoclist());
+   		model.addAttribute("userId", userDocumentdto.getUsers().getUserId());
    		return "list-user-document";
    	}
  	@GetMapping("/getlistdocument")
@@ -98,13 +99,15 @@ public class UserController
     }                   
 
     @PostMapping("/checkuserlogin")
-    public String checkingAccess(@ModelAttribute("users") Users user) {
+    public String checkingAccess(@ModelAttribute("users") Users user,Model model) {
+    	System.out.println(user.getUserId());
         Users users = userService.getUserByuserNameAnduserPassword(user.getUserName(),user.getUserPassword());
         if (users!= null){
-
-            return "redirect:/document/addformdocument";
-        } else
-            return "invalid-user-error";
+            return "redirect:/user/getlistuserdocument?id="+users.getUserId();
+        } else {
+        	model.addAttribute("result", "password and UserName Mismatch");
+            return "user-login-form";
+        }
     }
     @GetMapping("/first")
 	private String firstPage()

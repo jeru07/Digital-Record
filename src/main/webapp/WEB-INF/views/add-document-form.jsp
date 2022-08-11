@@ -61,8 +61,14 @@ select {
 	<div id="root">
 		<div id="form">
 			<h1>DOCUMENT DETAILS</h1>
-			<form:form action="add" method="post" modelAttribute="adddocuments">
+			<form:form action="add" method="post" enctype="multipart/form-data" modelAttribute="adddocuments">
 				<div>
+				<label for="userId">User Id</label>
+				<form:input path="userId" title="Id must be number"
+				required="true" placeholder="enter user Id"/>
+			<form:errors path="userId" cssClass="text-danger" />
+				</div>
+				
 				<div class="custom-select" style="width:500px;">
 					<label for="documentName">Document Name</label>
 					<td><form:select path="documentName">
@@ -81,22 +87,21 @@ select {
 							<form:option value="covid">Covid Vaccination Certificate</form:option>
 						</form:select></td>
 						</div>
-				</div>
 				<form:errors path="documentName" cssClass="text-danger" />
 		</div>
 		<div>
 			<label for="documentId">Document Id</label>
 			<form:input path="documentId" type="text" title="Id must be number"
-				required="true" />
+				required="true" placeholder="enter document number"/>
 			<form:errors path="documentId" cssClass="text-danger" />
 		</div>
 		<div>
 			<label for="issueDate">Issue Date</label> <input type="date"
-				id="issueDate" name="issueDate" type="text">
+				id="issueDate" name="issueDate" type="text" >
 			<form:errors path="issueDate" cssClass="text-danger" />
 		</div>
 		<div>
-			<label for="validTill">VALID till</label> <input type="date"
+			<label for="validTill">VALID Till</label> <input type="date"
 				id="validTill" name="validTill" type="text">
 			<form:errors path="validTill" cssClass="text-danger" />
 		</div>
@@ -118,19 +123,20 @@ select {
 		<div>
 			<label for="notes">Notes</label>
 			<form:input path="notes" type="text"
-				title="Name can't be empty And User Name must be in String" />
-			<form:errors path="notes" cssClass="text-danger" />
+				title="Name can't be empty And User Name must be in String" placeholder="enter important message" />
+			<form:errors path="notes" cssClass="text-danger"  />
 		</div>
 		<div>
 			<label for="documentImage">Document Image</label>
-			<form:input path="documentImage" type='file' placeholder='file'
-				accept='audio/*,video/*,image/*' />
+			<input name="photo" type='file' placeholder='file' required="true" accept='audio/*,video/*,image/*'/>
 		</div>
 		<div>
-			<form:button type="submit" class="register">Upload</form:button>
+			<form:button type="submit" class="register">UPLOAD</form:button>
 		</div>
-		</form:form>
-	</div>
-	</div>
+		</div>
+		
+	</form:form>
+	
+
 </body>
 </html>

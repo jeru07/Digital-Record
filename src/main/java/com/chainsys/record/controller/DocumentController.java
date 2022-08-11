@@ -1,5 +1,7 @@
 package com.chainsys.record.controller;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.chainsys.record.commonutil.LogManager;
 import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Documents;
 import com.chainsys.record.model.Users;
@@ -31,21 +35,35 @@ public class DocumentController {
 	public String getDocuments(Model model) {
 		List<Documents> thedoc = documentService.getDocuments();
 		model.addAttribute("alldocuments", thedoc);
+		
 		return "list-document";
 	}
 
 	@GetMapping("/addformdocument")
-	public String showAddDocuments(Model model) {
+	public String showAddDocuments(@RequestParam("id")int id, Model model) {
 		Documents thedoc = new Documents();
 		model.addAttribute("adddocuments", thedoc);
+		model.addAttribute("userId", thedoc.getUserId());
+		thedoc.getUserId();
 		return "add-document-form";
 	}
 
 	@PostMapping("/add")
-	public String addNewDocuments(@ModelAttribute("adddocuments") Documents thedoc,Model model) {
-		System.out.println(thedoc.getDocumentImage().length());
-		System.out.println(thedoc.getDocumentImage().getName());
+	public String addNewDocuments(@RequestParam("photo") MultipartFile photo,@ModelAttribute("adddocuments") Documents thedoc,Model model) {
+		try {
+			System.out.println(photo.getBytes().length);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			thedoc.setDocumentImage(photo.getBytes());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+			LogManager.logException(e, "DocumentController.addNewDocuments");
+		}
 		documentService.save(thedoc);
+		model.addAttribute("userId", thedoc.getUserId());
 		Users user=userservice.findByid(thedoc.getUserId());
 		model.addAttribute("getuser", user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
@@ -57,6 +75,7 @@ public class DocumentController {
 	public String showUpdateDocuments(@RequestParam("id") int id, Model model) {
 		Documents thedoc = documentService.findByid(id);
 		model.addAttribute("updateddocuments", thedoc);
+		thedoc.getUserId();
 		return "update-document-form";
 	}
 

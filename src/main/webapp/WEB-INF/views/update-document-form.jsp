@@ -32,59 +32,59 @@ input[type=text], input[type=password],input[type=date]
 	<div id="root">
 		<div id="form">
 			<form:form action="updateddocuments" method="post" modelAttribute="updateddocuments"
-			style="margin: auto; width: 220px;">
-				<div>
-					<label for="userId">User id</label>
-					<div>
-						<form:input path="userId" />
-					</div>
+			style="margin: auto; width: 300px;">
+			<div>
+					<label for="userId">User Id</label>
+					
+						<form:input path="userId" readonly="true" />
+					
 				</div>
 				<div>
 					<label for="documentName">Document Name</label>
-					<div>
-						<form:input path="documentName" />
-					</div>
+						<form:input path="documentName" readonly="true" />
 				</div>
 				<div>
 					<label for="documentId">Document Id</label>
-					<div>
-						<form:input path="documentId" />
-					</div>
+					
+						<form:input path="documentId" readonly="true" />
+					
 				</div>
 				<div>
 					<label for="issueDate">Issue Date</label>
-					<div>
-						<form:input path="issueDate" />
-					</div>
+					
+						<form:input path="issueDate" type="date"  readonly="true"/>
+					
 				</div>
 				<div>
 					<label for="validTill">VALID till</label>
-					<div>
-						<form:input path="validTill" />
-					</div>
+					
+					<form:input path="validTill" tye="date"  />
+					
 				</div>
 				<div>
 					<label for="issuedBy">Issued By</label>
-					<div>
-						<form:input path="issuedBy" />
-					</div>
+					
+						<form:input path="issuedBy" readonly="true"/>
+					
 				</div>
 				<div>
 					<label for="notes">Notes</label>
-					<div>
+					
 						<form:input path="notes" />
-					</div>
+					
 				</div>
 				<div>
 					<label for="documentImage">Document Image</label>
-					<div>
+					
 						<form:input path="documentImage" />
-					</div>
+					
 					<input type="file" name="file" /> <br /> 
+					
 					<form:button>UPDATE</form:button>
 					
 				</div>
 			</form:form>
+		</div>
 		</div>
 </body>
 </html>

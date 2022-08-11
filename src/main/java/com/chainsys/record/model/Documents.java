@@ -1,12 +1,11 @@
 package com.chainsys.record.model;
 
-import java.io.File;
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+//import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Digits;
@@ -17,8 +16,6 @@ import javax.validation.constraints.NotNull;
 public class Documents {
 	
 	@Column(name="user_id")
-	@Min(value = 1,message="Enter a valid Id between 1 to 100")
-	@Max(value = 100,message="Enter a valid Id between 1 to 100")
         private int userId;
 	@Column(name="document_name")
 	@NotNull(message="Documentname is required")
@@ -40,7 +37,7 @@ public class Documents {
 		private String notes;
 	@Column(name="document_image")
 	@NotNull(message="Image is required")
-		private File documentImage;
+		private byte[] documentImage;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="user_id" , nullable=false,insertable=false,updatable=false)
@@ -94,10 +91,10 @@ public class Documents {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
-	public File getDocumentImage() {
+	public byte[] getDocumentImage() {
 		return documentImage;
 	}
-	public void setDocumentImage(File documentImage) {
+	public void setDocumentImage(byte[] documentImage) {
 		this.documentImage = documentImage;
 	}
 }

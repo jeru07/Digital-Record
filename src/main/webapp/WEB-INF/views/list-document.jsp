@@ -52,7 +52,7 @@ tr:hover {background-color: #ff0066;}
 						<td>${docu.validTill}</td>
 						<td>${docu.issuedBy}</td>
 						<td>${docu.notes}</td>
-						<td>${docu.documentImage}</td>
+						<td><img width="100" height="100" src="getimage?id=${docu.documentId}"></td>
 					</tr>
 				</c:forEach>
 			</tbody>

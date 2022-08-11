@@ -37,7 +37,7 @@ tr:hover {
 				<tr>
 					<th style="color: #000066;">USER ID</th>
 					<th style="color: #000066;">USER NAME</th>
-					<th style="color: #000066;">USER PASSSWORD</th>
+					<!-- <th style="color: #000066;">USER PASSSWORD</th> -->
 					<th style="color: #000066;">FIRST NAME</th>
 					<th style="color: #000066;">LAST NAME</th>
 					<th style="color: #000066;">DATE OF BIRTH</th>
@@ -53,7 +53,7 @@ tr:hover {
 					<tr>
 						<td>${user.userId}</td>
 						<td>${user.userName}</td>
-						<td>${user.userPassword}</td>
+						<%-- <td>${user.userPassword}</td> --%>
 						<td>${user.firstName}</td>
 						<td>${user.lastName}</td>
 						<td>${user.dateOfBirth}</td>

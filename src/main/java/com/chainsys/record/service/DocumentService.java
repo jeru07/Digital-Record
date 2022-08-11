@@ -43,49 +43,17 @@ public class DocumentService {
 
 	public byte[] getDocumentImageByteArray(int id) {
 		Documents doc=documentRepo.findById(id);
-		File file = null;
-		FileInputStream fileinstream = null;
-
 		byte[] imageBytes = null;
-		try {
 			
 			if(doc!=null)
 			{
-				file=doc.getDocumentImage();
+				imageBytes=doc.getDocumentImage();
 			}
 			else
 			{
 				
 				System.out.println("debug:"+this.getClass().getName()+" doc is null "+id);
-			}
-			
-			if(file!=null) {
-			System.out.println(file.length());
-			  fileinstream = new FileInputStream(file);
-			int readbytes=fileinstream.read(imageBytes);
-			System.out.println("debug:"+this.getClass().getName()+" read bytes="+readbytes);
-			}
-			else 
-			{
-				System.out.println("debug:"+this.getClass().getName()+" file is null ");
-			}
-			
-		} catch (FileNotFoundException fe) {
-			//LogManager.logException(fe, this.getClass().getName());
-			fe.printStackTrace();
-		} catch (IOException e) {
-            e.printStackTrace();
-			//LogManager.logException(e, this.getClass().getName());
-		}
-
-		finally {
-			try {
-				if (fileinstream != null)
-					fileinstream.close();
-			} catch (IOException e) {
-				LogManager.logException(e, this.getClass().getName());
-			}
-		}
+			}	
 		return imageBytes;
 	}
 }

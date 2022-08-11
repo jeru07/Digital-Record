@@ -13,7 +13,7 @@
 			<form:form action="" method="post" modelAttribute="getdocumentbyid"
 				  style="margin: auto; width: 220px;">
 				<div>
-					<label for="userId">User id</label>
+					<label for="userId" value="0">User id</label>
 					<div>
 						<form:input path="userId" readonly="true"/>
 					</div>
