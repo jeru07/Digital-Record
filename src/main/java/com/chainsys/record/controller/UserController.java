@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Users;
 import com.chainsys.record.service.UserService;
@@ -76,7 +75,7 @@ public class UserController
    	}
    	@GetMapping("/getlistuserdocument")
    	public String getDocumentUser(@RequestParam("id") int id ,Model model)
-   	{
+   	{  
    		UsersDocumentsDTO userDocumentdto=userService.getUserDocument(id);
    		model.addAttribute("getuser", userDocumentdto.getUsers());
    		model.addAttribute("doclist", userDocumentdto.getDoclist());

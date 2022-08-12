@@ -18,11 +18,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-image:
+		url('https://i.pinimg.com/474x/e4/34/9a/e4349a091bf1d979e763a52d610edfd1.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 
 table, tb {
 	width: 100%;
-	padding: 15px;
+	padding: 105px;
 	text-align: left;
 }
 
@@ -42,12 +47,12 @@ td {
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getuser">
-				<div>
+			<%-- 	<div>
 					<label for="userId">User id</label>
 					<form:input path="userId" readonly="true" />
 				</div>
 				<br />
-
+ --%>
 				<div></div>
 			</form:form>
 		</div>
@@ -55,8 +60,8 @@ td {
 			<table>
 				<thead>
 					<tr>
-						<th style="color: white; font-size: 20pt;">USER ID</th>
-						<th style="color: white; font-size: 20pt;">DOCUMENT NAME</th>
+						<th style="color: red; font-size: 20pt;">USER ID</th>
+						<th style="color: red; font-size: 20pt;">DOCUMENT NAME</th>
 						<!-- <th style="color: white; font-size: 20pt;">DOCUMENT ID</th>
 						<th style="color: white; font-size: 20pt;">ISSUE DATE</th>
 						<th style="color: white; font-size: 20pt;">VALID TILL</th>
@@ -86,7 +91,7 @@ td {
 		</div>
 	</div>
 	<script type="text/javascript">
-	alert("Hello");
+	alert("See Documents");
 	
 	</script>
 </body>

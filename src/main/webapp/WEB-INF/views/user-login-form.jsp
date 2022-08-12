@@ -52,7 +52,7 @@ form {
 	font-family: inherit;
 	font-size: 21px;
 	display: block;
-	width: 100%;
+	width: 50%;
 	margin-top: 50px;
 	margin-bottom: 20px;
 }

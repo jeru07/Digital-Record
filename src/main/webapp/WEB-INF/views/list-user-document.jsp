@@ -51,10 +51,24 @@ th, td {
 	margin: 4px 2px;
 	cursor: pointer;
 }
+.button3 {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	top:500px;
+	left:720px;
+	}
 
 input[type=text] {
-	width: 20%;
-	padding: 10px;
+	width: 25%;
+	padding: 15px;
 	/*  margin: 10px 0 22px 0;
   display: inline-block; */
 	border-color: black;
@@ -65,7 +79,7 @@ label {
 	color: #000080;
 	font-weight: bold;
 	display: block;
-	width: 150px;
+	width: 200px;
 	float: left;
 	text-align: center;
 	font-size: 20px;
@@ -130,15 +144,15 @@ tr:hover {
 			<table>
 				<thead>
 					<tr>
-						<th style="color: white; font-size: 15pt;">USER ID</th>
-						<th style="color: white; font-size: 15pt;">DOCUMENT NAME</th>
-						<th style="color: white; font-size: 15pt;">DOCUMENT ID</th>
-						<th style="color: white; font-size: 15pt;">ISSUE DATE</th>
-						<th style="color: white; font-size: 15pt;">VALID TILL</th>
-						<th style="color: white; font-size: 15pt;">ISSUED BY</th>
-						<th style="color: white; font-size: 15pt;">NOTES</th>
-						<th style="color: white; font-size: 15pt;">DOCUMENT IMAGE</th>
-						<th style="color: white; font-size: 15pt;">ACTION</th>
+						<th style="color: blue; font-size: 15pt;">USER ID</th>
+						<th style="color: blue; font-size: 15pt;">DOCUMENT NAME</th>
+						<th style="color: blue; font-size: 15pt;">DOCUMENT ID</th>
+						<th style="color: blue; font-size: 15pt;">ISSUE DATE</th>
+						<th style="color: blue; font-size: 15pt;">VALID TILL</th>
+						<th style="color: blue; font-size: 15pt;">ISSUED BY</th>
+						<th style="color: blue; font-size: 15pt;">NOTES</th>
+						<th style="color: blue; font-size: 15pt;">DOCUMENT IMAGE</th>
+						<th style="color: blue; font-size: 15pt;">ACTION</th>
 
 					</tr>
 				</thead>
@@ -152,8 +166,7 @@ tr:hover {
 							<td>${docu.validTill}</td>
 							<td>${docu.issuedBy}</td>
 							<td>${docu.notes}</td>
-							<td><img width="100" height="100"
-								src="getimage?id=${docu.documentId}"></td>
+							<td><img width="100" height="100" src="getimage?id=${docu.documentId}"></td>
 							<td><a
 								href="/document/updateformdocument?id=${docu.documentId}"> <input
 									type="button" onclick="change()" value="UPDATE" class="button1"
@@ -165,10 +178,14 @@ tr:hover {
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="/document/addformdocument?userId=${userId}">
+			<a href="/document/addformdocument?id=${userId}">
 				<button class="button">ADD NEW DOCUMENT</button>
+			</a>
+			<a href="/user/userlogin">
+				<button class="button3">LOGOUT</button>
 			</a>
 		</div>
 	</div>
+	
 </body>
 </html>

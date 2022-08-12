@@ -1,6 +1,5 @@
 package com.chainsys.record.repository;
 
-import java.io.File;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;

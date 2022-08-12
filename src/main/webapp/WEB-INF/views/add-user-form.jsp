@@ -62,7 +62,7 @@ input[type=text], input[type=password], input[type=date] {
 				</div>
 				<div>
 					<label for="userPassword">User Password:</label>
-					<form:input path="userPassword" type="password"
+					<form:input path="userPassword" type="password" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
 						title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
 						required="true"  placeholder="Thinkpad@12" />
 						

@@ -1,7 +1,6 @@
 package com.chainsys.record.controller;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +56,6 @@ public class DocumentController {
 		}
 		try {
 			thedoc.setDocumentImage(photo.getBytes());
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 			LogManager.logException(e, "DocumentController.addNewDocuments");
@@ -72,7 +70,7 @@ public class DocumentController {
 	}
 
 	@GetMapping("/updateformdocument")
-	public String showUpdateDocuments(@RequestParam("userId") int id, Model model) {
+	public String showUpdateDocuments(@RequestParam("id") int id, Model model) {
 		Documents thedoc = documentService.findByid(id);
 		model.addAttribute("updateddocuments", thedoc);
 		thedoc.getUserId();
