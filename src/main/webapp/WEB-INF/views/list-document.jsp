@@ -41,6 +41,7 @@ tr:hover {background-color: #ff0066;}
 					<th>NOTES</th>
 					<th>DOCUMENT IMAGE</th>
 				</tr>
+				
 			</thead>
 			<tbody>
 				<c:forEach var="docu" items="${alldocuments}">
