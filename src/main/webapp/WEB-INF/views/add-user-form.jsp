@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Add User</title>
@@ -18,7 +18,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	background-image:
-		url('https://media.istockphoto.com/photos/workspace-desk-top-view-no-people-copy-space-picture-id1161855233?k=20&m=1161855233&s=170667a&w=0&h=OU2TqeYqy6plkRC6y5pLQNNKfzxPP-0h8k_5eBW7a40=');
+		url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-tech-background-image-of-desktop-notebook-and-computer-image_133044.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;

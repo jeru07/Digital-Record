@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>USER DOCUMENT LIST</title>
@@ -19,7 +19,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	background-image: url('https://wallpaperaccess.com/full/253460.jpg');
+	background-image: url('https://media.istockphoto.com/photos/workspace-desk-top-view-no-people-copy-space-picture-id1161855233?k=20&m=1161855233&s=170667a&w=0&h=OU2TqeYqy6plkRC6y5pLQNNKfzxPP-0h8k_5eBW7a40=');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
