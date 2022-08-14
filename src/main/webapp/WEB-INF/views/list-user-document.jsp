@@ -152,8 +152,8 @@ tr:hover {
 						<th style="color: blue; font-size: 15pt;">ISSUED BY</th>
 						<th style="color: blue; font-size: 15pt;">NOTES</th>
 						<th style="color: blue; font-size: 15pt;">DOCUMENT IMAGE</th>
+						<th style="color: blue; font-size: 15pt;">VIEW</th>
 						<th style="color: blue; font-size: 15pt;">ACTION</th>
-
 					</tr>
 				</thead>
 				<tbody>
@@ -167,11 +167,17 @@ tr:hover {
 							<td>${docu.issuedBy}</td>
 							<td>${docu.notes}</td>
 							<td><img width="100" height="100" src="getimage?id=${docu.documentId}"></td>
+							
+							<td><a href="/document/getimage?id=${docu.documentId}">
+							<input
+									type="button" onclick="change()" value="VIEW" class="button1"
+									id="myButton1"></input></a>	
+										
 							<td><a
 								href="/document/updateformdocument?id=${docu.documentId}"> <input
 									type="button" onclick="change()" value="UPDATE" class="button1"
-									id="myButton1"></input></a> <a
-								href="/document/deletedocuments?id=${docu.documentId}"><input
+									id="myButton1"></input></a>		
+							<a href="/document/deletedocuments?id=${docu.documentId}"><input
 									type="button" onclick="change()" value="DELETE" class="button2"
 									id="myButton2"></input></a></td>
 						</tr>

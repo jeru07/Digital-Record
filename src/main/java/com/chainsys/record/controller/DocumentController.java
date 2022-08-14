@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-
-import com.chainsys.record.commonutil.LogManager;
 import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Documents;
 import com.chainsys.record.model.Users;
@@ -58,7 +56,6 @@ public class DocumentController {
 			thedoc.setDocumentImage(photo.getBytes());
 		} catch (IOException e) {
 			e.printStackTrace();
-			LogManager.logException(e, "DocumentController.addNewDocuments");
 		}
 		documentService.save(thedoc);
 		model.addAttribute("userId", thedoc.getUserId());
@@ -107,8 +104,7 @@ public class DocumentController {
  	public ResponseEntity<byte[]> getImage(@RequestParam("id") int id)
  	{
  		byte[] imageBytes=documentService.getDocumentImageByteArray(id);
- 		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);
- 		
+ 		return ResponseEntity.ok().contentType(MediaType.IMAGE_JPEG).body(imageBytes);	
  	}
  	
 }
