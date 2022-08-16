@@ -167,7 +167,7 @@ tr:hover {
 							<td>${docu.validTill}</td>
 							<td>${docu.issuedBy}</td>
 							<td>${docu.notes}</td>
-							<td><img width="100" height="100" src="/document/getimage?id=${docu.documentId}"></td>
+							<td><img width="100" height="100" src="/document/getimage?id=${docu.documentId}" alt="image"></td>
 							
 							<td><a href="/document/getimage?id=${docu.documentId}">
 							<input

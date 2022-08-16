@@ -27,7 +27,7 @@ tr:hover {background-color: #ff0066;}
 </head>
 <body>
 <div style="width:100%" style="text-align: center;"> 
-<h1 style="color:aqua" >List of Documents</h1>  
+<h1 style="color:red" >List of Documents</h1>  
 	<div id="table root">
 		<table>
 		<caption></caption>
@@ -54,7 +54,7 @@ tr:hover {background-color: #ff0066;}
 						<td>${docu.validTill}</td>
 						<td>${docu.issuedBy}</td>
 						<td>${docu.notes}</td>
-						<td><img width="100" height="100" src="getimage?id=${docu.documentId}"></td>
+						<td><img width="100" height="100" src="getimage?id=${docu.documentId}" alt="image"></td>
 					</tr>
 				</c:forEach>
 			</tbody>
