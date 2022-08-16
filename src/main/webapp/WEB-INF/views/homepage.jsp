@@ -51,5 +51,6 @@ text-align:center;
 
 <a href="/user/first">
 <button class="visit">VISIT</button></a>
+
 </body>
 </html>

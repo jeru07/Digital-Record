@@ -19,7 +19,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	background-image:
-		url('https://i.pinimg.com/474x/e4/34/9a/e4349a091bf1d979e763a52d610edfd1.jpg');
+		url('https://thumbs.dreamstime.com/b/back-to-school-background-girl-s-white-stationery-blank-laptop-computer-books-soft-pink-wall-white-wood-desk-back-120011212.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -27,7 +27,7 @@ body {
 
 table, tb {
 	width: 100%;
-	padding: 105px;
+	padding: 180px;
 	text-align: left;
 }
 
@@ -58,16 +58,11 @@ td {
 		</div>
 		<div id="table root">
 			<table>
-				<caption>Documents</caption>
+				<caption>Users Documents List</caption>
 				<thead>
 					<tr>
 						<th style="color: red; font-size: 20pt;">USER ID</th>
 						<th style="color: red; font-size: 20pt;">DOCUMENT NAME</th>
-						<th style="color: white; font-size: 20pt;">ISSUE DATE</th>
-						<th style="color: white; font-size: 20pt;">VALID TILL</th>
-						<th style="color: white; font-size: 20pt;">ISSUED BY</th>
-						<th style="color: white; font-size: 20pt;">NOTES</th>
-						<th style="color: white; font-size: 20pt;">DOCUMENT IMAGE</th>
 					</tr>
 				</thead>
 				<tbody>

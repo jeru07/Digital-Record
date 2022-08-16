@@ -9,7 +9,7 @@
 <title>Add Document</title>
 <style>
 body {
-	color: #5D6063;
+	color: red;
 	background-color: #EAEDF0;
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size: 20px;
@@ -18,7 +18,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	background-image:
-		url('https://img.freepik.com/free-vector/watercolor-nature-background-with-leaves_52683-59449.jpg?w=2000');
+		url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-flat-education-office-stationery-background-image_193764.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -37,8 +37,8 @@ select {
   background-color: transparent;
   border-color:black;
   padding: 0 1em 0 0;
-  margin: 0;
-  width: 100%;
+  margin: 10px;
+  width: 70%;
   font-family: inherit;
   font-size: inherit;
   cursor: inherit;
@@ -69,11 +69,11 @@ select {
 			<form:errors path="userId" cssClass="text-danger" />
 				</div>
 				
-				<div class="custom-select" style="width:500px;">
+				<div class="custom-select">
 					<label for="documentName">Document Name</label>
-					<td><form:select path="documentName">
+					<form:select path="documentName">
 							<form:errors path="documentName" required="true" />
-							<option>-------Select Your Document----------</option>
+							<option>Select Your Document</option>
 							<form:option value="aadhar">Aadhar</form:option>
 							<form:option value="license">Driving License</form:option>
 							<form:option value="pan">Permanent Account Number(PAN)</form:option>
@@ -85,58 +85,64 @@ select {
 							<form:option value="passport">PassBook</form:option>
 							<form:option value="birth">Birth Certificate</form:option>
 							<form:option value="covid">Covid Vaccination Certificate</form:option>
-						</form:select></td>
-						</div>
+						</form:select>
 				<form:errors path="documentName" cssClass="text-danger" />
 		</div>
+		
 		<div>
 			<label for="documentId">Document Id</label>
 			<form:input path="documentId" type="text" title="Id must be number"
 				required="true" placeholder="enter document number"/>
 			<form:errors path="documentId" cssClass="text-danger" />
 		</div>
+		
 		<div>
 			<label for="issueDate">Issue Date</label> <input type="date"
 				id="issueDate" name="issueDate" type="text" >
 			<form:errors path="issueDate" cssClass="text-danger" />
 		</div>
+		
 		<div>
 			<label for="validTill">VALID Till</label> <input type="date"
 				id="validTill" name="validTill" type="text">
 			<form:errors path="validTill" cssClass="text-danger" />
 		</div>
-		<div>
+		
+		
 		<div class="custom-select" style="width:500px;">
 			<label for="issuedBy">Issued By</label>
-			<td><form:select path="issuedBy">
+			<form:select path="issuedBy">
 							<form:errors path="issuedBy" required="true" />
-							<option>-------Select Issuing Department-------------------</option>
+							<option>Select Issuing Department</option>
 							<form:option value="aadhar">Central Government</form:option>
 							<form:option value="license">International</form:option>
 							<form:option value="pan">School/College</form:option>
 							<form:option value="voterid">Hospital</form:option>
 							<form:option value="Marksheet">Government</form:option>
 							<form:option value="ration">Bank</form:option>
-						</form:select></td>
+						</form:select>
 						</div>
-		</div><br/>
+		<br/>
+		
 		<div>
 			<label for="notes">Notes</label>
 			<form:input path="notes" type="text"
 				title="Name can't be empty And User Name must be in String" placeholder="enter important message" />
 			<form:errors path="notes" cssClass="text-danger"  />
 		</div>
+		
 		<div>
 			<label for="documentImage">Document Image</label>
-			<input name="photo" type='file' placeholder='file' required="true" accept='audio/*,video/*,image/*'/>
+			<input name="photo" type='file' 
+			accept='audio/*,video/*,image/*'/>
 		</div>
+		
 		<div>
 			<form:button type="submit" class="register">UPLOAD</form:button>
 		</div>
-		</div>
 		
-	</form:form>
-	
-
+		</form:form>
+		</div>
+		</div>
 </body>
 </html>

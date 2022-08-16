@@ -52,20 +52,19 @@ input[type=text], input[type=password], input[type=date] {
 	<div id="root">
 		<div id="form">
 			<h1>USER DETAILS</h1>
-			<form:form name="myForm" onsubmit="return validateForm()" action="add" method="post" modelAttribute="addusers">
-				<div>
+			<form:form action="add" method="post" modelAttribute="addusers" class="container" name="form">
+				<div class="form-control">
 					<label for="userName">User Name:</label>
 					<form:input path="userName" type="text"
 						title="Name can't be empty And User Name must be in alphabets"
-						required="true"  placeholder="enter username"/>
+						required="true"  placeholder="enter username" onblur="userNameCheck();"/>
 					<form:errors path="userName" cssClass="text-danger" />
 				</div>
-				<div>
+				<div class="form-control">
 					<label for="userPassword">User Password:</label>
 					<form:input path="userPassword" type="password" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
 						title='password must begin with letter and contain atleast one number and must have atleast 8 characters'
-						required="true"  placeholder="Thinkpad@12" />
-						
+						required="true"  placeholder="Thinkpad@12" onblur="passwordCheck();" />
 					<form:errors path="userPassword" cssClass="text-danger" />
 				</div>
 				<div>
@@ -88,19 +87,19 @@ input[type=text], input[type=password], input[type=date] {
 					<form:errors path="dateOfBirth" cssClass="text-danger" />
 					<%-- <form:input path="dateOfBirth" /> --%>
 				</div>
-				<div>
+				<div class="form-control">
 					<label for="eMail">E-mail: </label>
 					<form:input path="eMail" type="text"
 						title="Mail Id is not in correct format"
-						pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="welcome@gmail.com" required="true" />
+						pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="welcome@gmail.com" required="true"  onblur="emailCheck();" />
 						
 					<form:errors path="eMail" cssClass="text-danger" />
 				</div>
-				<div>
+				<div class="form-control">
 					<label for="phoneNumber">Phone Number: </label>
 					<form:input path="phoneNumber" type="text"
 					title="phone number is not in correct format"
-						placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" />
+						placeholder="1234567890" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" onblur="phoneNoCheck();" />
 					<br>
 					<form:errors path="phoneNumber" cssClass="text-danger" />
 				</div>
@@ -110,10 +109,10 @@ input[type=text], input[type=password], input[type=date] {
 						id="gender" name="gender" value="female" />Female <br />
 					<form:errors path="gender" cssClass="text-danger" />
 				</div>
-				<div>
+				<div class="form-control">
 					<label for="address">Address: </label>
 					<form:input path="address" type="text" placeholder="enter your address" required="true"/>
-					<form:errors path="address" cssClass="text-danger"  />
+					<form:errors path="address" cssClass="text-danger" onblur="addressCheck();" />
 				</div>
 				<br />
 				<div>
@@ -122,5 +121,75 @@ input[type=text], input[type=password], input[type=date] {
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+	 var userNameCheck = function() {
+		 var nameRegex = new RegExp("^[a-zA-z\s]+$");
+		 if(!document.form.userName.value.match(nameRegex)){
+				if(alert("Name can't be empty or must contain only alphabets")){ 
+					 document.form.userName.focus();
+			    }
+				else
+					document.activeElement.blur();
+			}
+	    else{
+	        return false;
+	    } 
+	   
+	}
+	 var emailCheck = function() {
+		 var nameRegex = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		 if(!document.form.eMail.value.match(nameRegex)){
+				if(alert("Email not in the correct format")){ 
+					 document.form.eMail.focus();
+			    }
+				else
+					document.activeElement.blur();
+			}
+	    else{
+	        return false;
+	    } 
+	   
+	}
+	 
+	 var passwordCheck = function() {
+		 var nameRegex = new RegExp("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
+		 if(!document.form.userPassword.value.match(nameRegex)){
+				if(alert("Password must begin with letter and contain atleast one number and must have atleast 8 characters")){ 
+					 document.form.userPassword.focus();
+			    }
+				else
+					document.activeElement.blur();
+			}
+	    else{
+	        return false;
+	    } 
+	   
+	}
+	 var phoneNoCheck = function() {
+		 var nameRegex = new RegExp("[0-9]{10}");
+		 if(!document.form.phoneNumber.value.match(nameRegex)){
+				if(alert("Phone number must have 10 digits")){ 
+					 document.form.phoneNumber.focus();
+			    }
+				else
+					document.activeElement.blur();
+			}
+	    else{
+	        return false;
+	    } 
+	 }
+	 var addressCheck = function() {
+		 if(document.form.address.value == ""){
+				if(alert("Address cannot be blank")){ 
+					 document.form.address.focus();
+			    }
+				else
+					document.activeElement.blur();
+			}
+		 else{
+		    	return false;
+		    }
+	 }
+	</script>
 	</body>
 </html>
