@@ -47,7 +47,7 @@ td {
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="getuser">
-			<%-- 	<div>
+				<%-- 	<div>
 					<label for="userId">User id</label>
 					<form:input path="userId" readonly="true" />
 				</div>
@@ -58,6 +58,7 @@ td {
 		</div>
 		<div id="table root">
 			<table>
+				<caption>Documents</caption>
 				<thead>
 					<tr>
 						<th style="color: red; font-size: 20pt;">USER ID</th>
@@ -67,8 +68,6 @@ td {
 						<th style="color: white; font-size: 20pt;">ISSUED BY</th>
 						<th style="color: white; font-size: 20pt;">NOTES</th>
 						<th style="color: white; font-size: 20pt;">DOCUMENT IMAGE</th>
-						<!-- <th>Update</th>
-						<th>Delete</th> -->
 					</tr>
 				</thead>
 				<tbody>
@@ -76,22 +75,17 @@ td {
 						<tr>
 							<td>${docu.userId}</td>
 							<td>${docu.documentName}</td>
-							<%-- <td>${docu.documentId}</td>
-							<td>${docu.issueDate}</td>
-							<td>${docu.validTill}</td>
-							<td>${docu.issuedBy}</td>
-							<td>${docu.notes}</td>
-							<td>${docu.documentImage}</td> --%>
-							
+
 						</tr>
 					</c:forEach>
 				</tbody>
+				
 			</table>
+			
 		</div>
 	</div>
 	<script type="text/javascript">
-	alert("See Documents");
-	
+		alert("See Documents");
 	</script>
 </body>
 </html>

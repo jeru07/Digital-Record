@@ -33,11 +33,11 @@ tr:hover {
 	<h1 style="color: Tomato">LIST OF USERS</h1>
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th style="color: #000066;">USER ID</th>
 					<th style="color: #000066;">USER NAME</th>
-					<!-- <th style="color: #000066;">USER PASSSWORD</th> -->
 					<th style="color: #000066;">FIRST NAME</th>
 					<th style="color: #000066;">LAST NAME</th>
 					<th style="color: #000066;">DATE OF BIRTH</th>

@@ -30,6 +30,7 @@ tr:hover {background-color: #ff0066;}
 <h1 style="color:aqua" >List of Documents</h1>  
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>USER ID</th>

@@ -142,6 +142,7 @@ tr:hover {
 		</div>
 		<div id="table root">
 			<table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th style="color: blue; font-size: 15pt;">USER ID</th>
