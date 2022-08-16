@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.chainsys.record.dto.UsersDocumentsDTO;
 import com.chainsys.record.model.Users;
 import com.chainsys.record.service.UserService;
@@ -111,12 +109,12 @@ public class UserController
         }
     }
     @GetMapping("/first")
-	private String firstPage()
+	public String firstPage()
 	{
 		return "firstpage";
 	}
     @GetMapping("/home")
-   	private String homePage()
+   	public String homePage()
    	{
    		return "homepage";
    	}

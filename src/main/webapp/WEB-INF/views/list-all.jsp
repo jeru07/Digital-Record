@@ -62,13 +62,12 @@ td {
 					<tr>
 						<th style="color: red; font-size: 20pt;">USER ID</th>
 						<th style="color: red; font-size: 20pt;">DOCUMENT NAME</th>
-						<!-- <th style="color: white; font-size: 20pt;">DOCUMENT ID</th>
 						<th style="color: white; font-size: 20pt;">ISSUE DATE</th>
 						<th style="color: white; font-size: 20pt;">VALID TILL</th>
 						<th style="color: white; font-size: 20pt;">ISSUED BY</th>
 						<th style="color: white; font-size: 20pt;">NOTES</th>
 						<th style="color: white; font-size: 20pt;">DOCUMENT IMAGE</th>
-						<th>Update</th>
+						<!-- <th>Update</th>
 						<th>Delete</th> -->
 					</tr>
 				</thead>
