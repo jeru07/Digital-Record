@@ -37,11 +37,6 @@ public class DocumentService {
 			{
 				imageBytes=doc.getDocumentImage();
 			}
-			else
-			{
-				
-				System.out.println("debug:"+this.getClass().getName()+" doc is null "+id);
-			}	
 		return imageBytes;
 	}
 }

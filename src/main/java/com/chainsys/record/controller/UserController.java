@@ -99,7 +99,7 @@ public class UserController
 
     @PostMapping("/checkuserlogin")
     public String checkingAccess(@ModelAttribute("users") Users user,Model model) {
-    	System.out.println(user.getUserId());
+    	user.getUserId();
         Users users = userService.getUserByuserNameAnduserPassword(user.getUserName(),user.getUserPassword());
         if (users!= null){
             return "redirect:/user/getlistuserdocument?id="+users.getUserId();
