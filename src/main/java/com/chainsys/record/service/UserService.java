@@ -42,7 +42,7 @@ public class UserService {
 		List<Documents> documents = documentRepo.findByUserId(id);
 		Iterator<Documents> itr = documents.iterator();
 		while (itr.hasNext()) {
-			dto.addDocuments((Documents) itr.next());
+			dto.addDocuments(itr.next());
 		}
 		return dto;
 	}
