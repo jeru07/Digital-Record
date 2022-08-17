@@ -20,8 +20,7 @@ public class UserService {
 	private DocumentRepository documentRepo;
 
 	public List<Users> getUsers() {
-		List<Users> listUs = userRepo.findAll();
-		return listUs;
+		return userRepo.findAll();
 	}
 
 	public Users save(Users us) {

@@ -14,8 +14,7 @@ public class DocumentService {
 	private DocumentRepository documentRepo;
 
 	public List<Documents> getDocuments() {
-		List<Documents> listdoc = documentRepo.findAll();
-		return listdoc;
+		return documentRepo.findAll();
 	}
 
 	public Documents save(Documents doc) {
