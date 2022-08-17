@@ -10,7 +10,7 @@ import com.chainsys.record.model.Documents;
 public interface DocumentRepository extends CrudRepository<Documents, Integer> {
 	 Documents findById(int id);
 	  Documents save(Documents doc); // used for adding and updating
-	    void deleteById(int doc_id);
+	    void deleteById(int docid);
 	     List<Documents> findAll();
 	     List<Documents> findByUserId(int id);
 	    

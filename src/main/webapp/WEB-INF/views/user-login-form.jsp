@@ -37,13 +37,13 @@ form {
 	position: relative;
 }
 
-.center {
+ .center {
 	position: absolute;
 	top: 50%;
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-}
+} 
 /* Styling Button */
 .register {
 	background-color: #05c46b;
@@ -52,7 +52,7 @@ form {
 	font-family: inherit;
 	font-size: 21px;
 	display: block;
-	width: 50%;
+	width: 70%;
 	margin-top: 50px;
 	margin-bottom: 20px;
 }

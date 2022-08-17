@@ -10,7 +10,7 @@ public interface UserRepository extends CrudRepository<Users, Integer>
 {
 	Users findById(int id);
 	 Users save(Users dr); // used for adding and updating
-	    void deleteById(int user_id);
+	    void deleteById(int userid);
 	    List<Users> findAll();
 	    Users findByUserNameAndUserPassword(String name, String password);
 }
