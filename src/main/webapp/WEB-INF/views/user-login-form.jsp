@@ -37,24 +37,46 @@ form {
 	position: relative;
 }
 
- .center {
+.center {
 	position: absolute;
 	top: 50%;
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-} 
+}
 /* Styling Button */
 .register {
-	background-color: #05c46b;
-	border: 1px solid #777;
-	border-radius: 2px;
-	font-family: inherit;
-	font-size: 21px;
-	display: block;
-	width: 70%;
-	margin-top: 50px;
-	margin-bottom: 20px;
+	align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: initial;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 10px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.register:active,
+.register:hover{
+outline: 0;
+}
+@media (min-width: 768px){
+.register {
+    font-size: 19px;
+    min-width: 196px;
+  }
 }
 </style>
 </head>

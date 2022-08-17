@@ -22,8 +22,7 @@ public class DocumentService {
 	}
 
 	public Documents findByid(int id) {
-		Documents doc = documentRepo.findById(id);
-		return doc;
+		return documentRepo.findById(id);
 	}
 
 	public void deleteById(int id) {
