@@ -33,13 +33,14 @@ public class AdminController {
         return "admin-login-form";
     }
     @PostMapping("/checkadminloginform")
-    public String checkingAccess(@ModelAttribute("adminlogin") Admin admin) {
+    public String checkingAccess(@ModelAttribute("adminlogin") Admin admin,Model model) {
         Admin adminlog = adservice.getAdminByAdminNameAndPassword(admin.getAdminName(), admin.getPassword());
         if (adminlog!=null) {
             return "redirect:/admin/form";
         }
         else
-            return "redirect:/user/list";
+        	model.addAttribute("result","password and Name Mismatch");
+        return "admin-login-form";
         
     }  
     @GetMapping("/form")

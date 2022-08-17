@@ -31,7 +31,10 @@ form {
 	top: 200px;
 	left: 600px;
 }
-
+.res{
+font-size:20px;
+font-weight:bold;
+}
 </style>
 </head>
 <body>
@@ -45,14 +48,15 @@ form {
 					<form:input path="adminName" type="text" />
 				</div><br/>
 				<div>
-					<label for="password">Admin Password:</label>
+					<label for="password">Password:</label>
 					<form:input path="password" type="password" />
 				</div><br/>
 				<div>
-					<form:button type="submit" class="register">DONE</form:button></a>
+					<form:button type="submit" class="register">DONE</form:button>
 				</div>
 			</form:form>
 			</div>
 			</div>
+			<div class ="res">${result}</div>
 </body>
 </html>

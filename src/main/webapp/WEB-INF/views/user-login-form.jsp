@@ -78,6 +78,11 @@ outline: 0;
     min-width: 196px;
   }
 }
+.re{
+color:white;
+font-weight:bold;
+font-size:20px;
+}
 </style>
 </head>
 <body>
@@ -109,6 +114,6 @@ outline: 0;
 								class="register">SIGN UP</button></a>
 		</div>
 	</div>
-		<div>${result}</div>
+		<div class="re">${result}</div>
 </body>
 </html>
