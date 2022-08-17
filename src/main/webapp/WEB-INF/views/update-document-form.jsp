@@ -76,12 +76,10 @@ input[type=text], input[type=password],input[type=date]
 				<div>
 					<label for="documentImage">Document Image</label>
 					
-						<form:input path="documentImage" />
+						<form:input path="documentImage" readonly="true" />
 					
 					<input type="file" name="file" /> <br /> 
-					
 					<form:button>UPDATE</form:button>
-					
 				</div>
 			</form:form>
 		</div>

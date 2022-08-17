@@ -24,8 +24,8 @@ body {
 	background-size: 100% 100%;
 }
 
-input[type=text], input[type=date], input[type=file] {
-	width: 100%;
+input[type=text],[type=date],[type=file] {
+	width: 80%;
 	padding: 10px;
 	margin: 10px 0 22px 0;
 	display: inline-block;
@@ -58,42 +58,43 @@ select {
 </style>
 </head>
 <body>
-	<div id="root">
-		<div id="form">
 			<h1>DOCUMENT DETAILS</h1>
 			<form:form action="add" method="post" enctype="multipart/form-data" modelAttribute="adddocuments">
 				<div>
-				<label for="userId">User Id</label>
+				<label for="userId"></label>
+				<div>
 				<form:input path="userId" title="Id must be number"
-				required="true" placeholder="enter user Id"/>
-			<form:errors path="userId" cssClass="text-danger" />
+				required="true" placeholder="enter user Id" type="hidden"/>
+			<form:errors path="userId" cssClass="text-danger" /></div>
 				</div>
 				
 				<div class="custom-select">
 					<label for="documentName">Document Name</label>
+					<div>
 					<form:select path="documentName">
 							<form:errors path="documentName" required="true" />
 							<option>Select Your Document</option>
-							<form:option value="aadhar">Aadhar</form:option>
-							<form:option value="license">Driving License</form:option>
-							<form:option value="pan">Permanent Account Number(PAN)</form:option>
-							<form:option value="voterid">Voter ID</form:option>
+							<form:option value="Aadhar Card">Aadhar</form:option>
+							<form:option value="Driving License">Driving License</form:option>
+							<form:option value="PAN">Permanent Account Number(PAN)</form:option>
+							<form:option value="Voter Id">Voter ID</form:option>
 							<form:option value="Marksheet">Educational Certificate</form:option>
-							<form:option value="passport">Passport</form:option>
-							<form:option value="ration">Ration Card</form:option>
-							<form:option value="atmnumber">ATM Card Number</form:option>
-							<form:option value="passport">PassBook</form:option>
-							<form:option value="birth">Birth Certificate</form:option>
-							<form:option value="covid">Covid Vaccination Certificate</form:option>
+							<form:option value="Passport">Passport</form:option>
+							<form:option value="Ration Card">Ration Card</form:option>
+							<form:option value="Atm Number">ATM Card Number</form:option>
+							<form:option value="PassBook">PassBook</form:option>
+							<form:option value="Certificate">Birth Certificate</form:option>
+							<form:option value="Vaccination">Covid Vaccination Certificate</form:option>
 						</form:select>
-				<form:errors path="documentName" cssClass="text-danger" />
+				<form:errors path="documentName" cssClass="text-danger" /></div>
 		</div>
 		
 		<div>
 			<label for="documentId">Document Id</label>
+			<div>
 			<form:input path="documentId" type="text" title="Id must be number"
 				required="true" placeholder="enter document number"/>
-			<form:errors path="documentId" cssClass="text-danger" />
+			<form:errors path="documentId" cssClass="text-danger" /></div>
 		</div>
 		
 		<div>
@@ -111,38 +112,33 @@ select {
 		
 		<div class="custom-select" style="width:500px;">
 			<label for="issuedBy">Issued By</label>
+			<div>
 			<form:select path="issuedBy">
 							<form:errors path="issuedBy" required="true" />
 							<option>Select Issuing Department</option>
-							<form:option value="aadhar">Central Government</form:option>
-							<form:option value="license">International</form:option>
-							<form:option value="pan">School/College</form:option>
-							<form:option value="voterid">Hospital</form:option>
-							<form:option value="Marksheet">Government</form:option>
-							<form:option value="ration">Bank</form:option>
-						</form:select>
-						</div>
-		<br/>
-		
+							<form:option value="Central Government">Central Government</form:option>
+							<form:option value="International">International</form:option>
+							<form:option value="Institution">School/College</form:option>
+							<form:option value="Hospital">Hospital</form:option>
+							<form:option value="Government">Government</form:option>
+							<form:option value="Bank">Bank</form:option>
+						</form:select></div>
+						</div><br/>
 		<div>
 			<label for="notes">Notes</label>
+			<div>
 			<form:input path="notes" type="text"
 				title="Name can't be empty And User Name must be in String" placeholder="enter important message" />
-			<form:errors path="notes" cssClass="text-danger"  />
+			<form:errors path="notes" cssClass="text-danger"  /></div>
 		</div>
-		
 		<div>
 			<label for="documentImage">Document Image</label>
 			<input name="photo" type='file' 
 			accept='audio/*,video/*,image/*'/>
 		</div>
-		
 		<div>
 			<form:button type="submit" class="register">UPLOAD</form:button>
 		</div>
-		
 		</form:form>
-		</div>
-		</div>
 </body>
 </html>

@@ -48,11 +48,6 @@ public class DocumentController {
 	@PostMapping("/add")
 	public String addNewDocuments(@RequestParam("photo") MultipartFile photo,@ModelAttribute("adddocuments") Documents thedoc,Model model) {
 		try {
-			System.out.println(photo.getBytes().length);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
 			thedoc.setDocumentImage(photo.getBytes());
 		} catch (IOException e) {
 			e.printStackTrace();

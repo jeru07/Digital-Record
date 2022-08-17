@@ -14,13 +14,13 @@ body {
 	background-size: 100% 100%;
 }
 h1 {
-color: red;
 font-family: arial, sans-serif;
-font-size: 40px;
+font-size: 60px;
 font-weight: bold;
 margin-top: 0px;
 margin-bottom: 1px;
 text-align:center;
+text-shadow: 1px 1px 2px red, 0 0 25px white, 0 0 5px white;
 }
 .visit
 {
@@ -31,8 +31,8 @@ text-align:center;
     border:none; 
     border-radius:20px; 
     padding: 15px 32px;
-    left:570px;
-    font-size:40px;
+    left:590px;
+    font-size:30px;
 }
 .visit:hover {
       background-color:#FFDB58;
@@ -43,14 +43,20 @@ text-align:center;
     outline-style:solid;
     box-shadow: 0 0 0 4px #5a01a7;
 }
+
+  
+
 </style>
 </head>
 
 <body>
-<h1>DIGITAL RECORD MAINTANENCE</h1>
+<h1>GO DIGITAL</h1>
 
 <a href="/user/first">
 <button class="visit">VISIT</button></a>
+
+<a href="/user/about">
+<button class="about">About Us</button></a>
 
 </body>
 </html>
