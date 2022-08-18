@@ -19,24 +19,28 @@ body {
 
 /* Header/logo Title */
 .header {
-  padding: 80px;
+  padding: 290px;
   text-align: center;
   background: #1abc9c;
   color: white;
+  background-image:
+		url('https://st2.depositphotos.com/3591429/10884/i/600/depositphotos_108842716-stock-photo-business-people-and-go-digital.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 
-/* Increase the font size of the heading */
+
 .header h1 {
+  text-align:center;
   font-size: 40px;
 }
 
-/* Style the top navigation bar */
 .navbar {
   overflow: hidden;
   background-color: #333;
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
@@ -46,7 +50,6 @@ body {
   text-decoration: none;
 }
 
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
@@ -59,51 +62,69 @@ body {
 
 /* Column container */
 .row {  
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
+  
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+
 .side {
-  -ms-flex: 30%; /* IE10 */
+  -ms-flex: 30%; 
   flex: 30%;
   background-color: #f1f1f1;
   padding: 20px;
+  background-color:#FFA07A;
+  text-align:center;
+    border: 6px solid gray;
+}
+.bac {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+p {
+  text-indent: 90px;
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size:20px;
 }
 
-/* Main column */
+
 .main {   
-  -ms-flex: 70%; /* IE10 */
+  -ms-flex: 70%; 
   flex: 70%;
-  background-color: white;
+  background-color: #00FF7F;
   padding: 20px;
+  
 }
 
-/* Fake image, just for this example */
+
 .fakeimg {
   background-color: #aaa;
   width: 100%;
   padding: 20px;
+  background-image:
+		url('https://heliosed.com/wp-content/uploads/2021/02/Go-paperless-save-money.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+.header h4 {
+  color:blue;
+  font-size: 30px;
+  text-align:center;
+}
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
@@ -115,47 +136,44 @@ body {
 <body>
 
 <div class="header">
-  <h1>My Website</h1>
-  <p>A website created by me.</p>
+  <h1></h1>
+  
 </div>
 
-<div class="navbar">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
-</div>
 
 <div class="row">
   <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+    <h1>ABOUT GO DIGITAL</h1>
+    
+   <h5 style="color: white; font-size: 20pt;">"Your Documents Anytime Anywhere"</h5>
+   
+    <p>Go Digital is a record maintanence trending system where you can add your documents/records
+    and view it later for various purposes.It is a platform for issuance and verification of documents and certificates in a digital way, thus eliminating the use of physical documents.	Digital record  management is a system or process used to capture, track and store electronic documents such as  digital images of paper-based content.This system provides a convenient way of recovering your documents when needed. 
+    </p>
   </div>
+  
   <div class="main">
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <h2>BENEFITS OF USING GO DIGITAL:</h2>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p> 1. Effectively Retrieve and Dispose Documents--
+The consequences of spending too much time searching for documents can be quite severe;This is why it is important to invest in a go digital system that can facilitate retrieving records and disposing of documents past their end-of-life date.</p>
     <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <p>2. Better Management Decision Making--
+Making relevant data easily accessible allows people to take decisions faster so that they can stay ahead in any emergency situation. go digital software makes safer and secure documents , so that relevant data can be accessed faster.</p>
+<br>
+<p>3.Better Backup and Disaster Recovery--
+Go digital helps users to get their documents in case of missing With digital archiving as a backup,  documents are protected from fire and flood, and other disasters. </p>
+<br>
+<p>4.Increased Productivity--
+Time is valuable, and time saved is a definite benefit of go digital that often translates directly into increased productivity. Faster and more efficient document retrieval can uploading,updating and deleting. Also, digital record solutions are scalable to meet the changing needs of any problems.
+   </p>
+   <br>
+    <h2></h2>
+    <h5></h5>
+    <div class="fakeimg" style="height:200px;"></div>
   </div>
 </div>
-
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
+     <a href="/user/home">
+	<button class="bac">Back</button></a>
 </body>
 </html>

@@ -52,6 +52,9 @@ input[type=text], input[type=password], input[type=date] {
 	color: #7FE817
 }
 </style>
+<script>
+<%@include file="/WEB-INF/Script/validation.js"%>
+</script>
 </head>
 <body>
 	<div id="root">
@@ -87,9 +90,9 @@ input[type=text], input[type=password], input[type=date] {
 					<form:errors path="lastName" cssClass="text-danger" />
 				</div>
 				<div>
-					<label for="dateOfBirth">Date of Birth: </label> <input type="date"
-						id="dateOfBirth" name="dateOfBirth" type="text" pattern="\s+(?:19\d{2}|20[01][0-9]|2020)[-/.](?:0[1-9]|1[012])[-/.](?:0[1-9]|[12][0-9]|3[01])\b">
-					<form:errors path="dateOfBirth" cssClass="text-danger" onblur="checkDateOwner();"/>
+					<label for="dateOfBirth">Date of Birth: </label>
+					 <input type="date" id="dateOfBirth" name="dateOfBirth" onblur="checkDateOfBirth();" required />
+					<form:errors path="dateOfBirth" cssClass="text-danger" />
 				</div>
 				<div class="form-control">
 					<label for="eMail">E-mail: </label>
@@ -127,87 +130,5 @@ input[type=text], input[type=password], input[type=date] {
 	</div>
 	<a href="/user/userlogin">
 	<button class="bac">Back</button></a>
-	
-	<script type="text/javascript">
-	 var userNameCheck = function() {
-		 var nameRegex = new RegExp("^[a-zA-z\s]+$");
-		 if(!document.form.userName.value.match(nameRegex)){
-				if(alert("Name can't be empty or must contain only alphabets")){ 
-					 document.form.userName.focus();
-			    }
-				else
-					document.activeElement.blur();
-			}
-	    else{
-	        return false;
-	    } 
-	   
-	}
-	 var emailCheck = function() {
-		 var nameRegex = new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
-		 if(!document.form.eMail.value.match(nameRegex)){
-				if(alert("Email not in the correct format")){ 
-					 document.form.eMail.focus();
-			    }
-				else
-					document.activeElement.blur();
-			}
-	    else{
-	        return false;
-	    } 
-	   
-	}
-	 
-	 var passwordCheck = function() {
-		 var nameRegex = new RegExp("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
-		 if(!document.form.userPassword.value.match(nameRegex)){
-				if(alert("Password must begin with letter and contain atleast one number and must have atleast 8 characters")){ 
-					 document.form.userPassword.focus();
-			    }
-				else
-					document.activeElement.blur();
-			}
-	    else{
-	        return false;
-	    } 
-	   
-	}
-	 var phoneNoCheck = function() {
-		 var nameRegex = new RegExp("[0-9]{10}");
-		 if(!document.form.phoneNumber.value.match(nameRegex)){
-				if(alert("Phone number must have 10 digits")){ 
-					 document.form.phoneNumber.focus();
-			    }
-				else
-					document.activeElement.blur();
-			}
-	    else{
-	        return false;
-	    } 
-	 }
-	 var addressCheck = function() {
-		 if(document.form.address.value == ""){
-				if(alert("Address cannot be blank")){ 
-					 document.form.address.focus();
-			    }
-				else
-					document.activeElement.blur();
-			}
-		 else{
-		    	return false;
-		    }
-		 
-	 }
-	 function checkDateOwner() {
-	       let date = document.getElementById('dateOfBirth').value;
-	       let now = new Date();
-	       let dt1 = Date.parse(now),
-	       dt2 = Date.parse(date);
-	       if (dt2 >= dt1) {
-	            alert("Date must be in the past");
-	       }
-	 }
-	</script>
-	
 	</body>
 </html>

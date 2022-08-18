@@ -12,6 +12,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
+	
 }
 h1 {
 font-family: arial, sans-serif;
