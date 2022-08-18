@@ -31,8 +31,8 @@ Digital Record Maintanence :
 
 1. Form validation in frontend level.
 2. Form validation in Three level.
-3. DB Connectivity
-4. DTO connections
+3. DataBase Connectivity
+4. DataTransferObject connections
 5. Image Uploading 
 6. Generating Id automatically
  
