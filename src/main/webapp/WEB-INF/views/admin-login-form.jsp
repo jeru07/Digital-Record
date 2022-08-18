@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>ADMIN</title>
 <style>
 body {
 	background-color: #77DD77;

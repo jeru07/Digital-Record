@@ -4,7 +4,9 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>About Us</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <style>
 <style>
 * {
@@ -69,7 +71,12 @@ body {
   
 }
 
-
+.fa-home{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 4em;
+}
 .side {
   -ms-flex: 30%; 
   flex: 30%;
@@ -174,6 +181,6 @@ Time is valuable, and time saved is a definite benefit of go digital that often 
   </div>
 </div>
      <a href="/user/home">
-	<button class="bac">Back</button></a>
+      <em class="fa fa-home" style="font-size:48px;color:yellow"></em></a>	
 </body>
 </html>

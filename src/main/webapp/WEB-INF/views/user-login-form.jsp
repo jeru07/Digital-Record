@@ -7,9 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User Login Page</title>
-<link href='https://css.gg/home.css' rel='stylesheet'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <style>
-
 body {
 	background-color: #77DD77;
 	font-family: Verdana;
@@ -85,16 +85,13 @@ outline: 0;
     min-width: 196px;
   }
 }
-.gg-home{
-  position: absolute;
-    top: 8px;
+.fa-home{
+    position: absolute;
+    top: 20px;
     left: 16px;
-    font-size: 70px;
-    color:white;
-
-left:px;
-top:20px;
+    font-size: 4em;
 }
+
 .re{
 color:white;
 font-weight:bold;
@@ -136,8 +133,7 @@ font-size:20px;
 		<div class="re">${result}</div>
 		
 		<a href="/user/first">
-	 <em class="gg-home"></em></a>
-	
+      <em class="fa fa-home" style="font-size:48px;color:white"></em></a>	
 	
 </body>
 </html>

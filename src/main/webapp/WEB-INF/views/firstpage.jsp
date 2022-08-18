@@ -4,7 +4,9 @@
 <html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>First Page</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <style>
 body {
 	background-image:
@@ -83,7 +85,12 @@ body {
 	cursor: pointer;
 	width: 25%;
 }
-
+.fa-home{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 4em;
+}
 </style>
 </head>
 <body>
@@ -94,7 +101,7 @@ body {
 	<button class="button1">ADMIN</button></a>
 	
 	<a href="/user/home">
-	<button class="back">Back</button></a>
+	 <em class="fa fa-home" style="font-size:48px;color:black"></em></a>	
 	
 </body>
 </html>

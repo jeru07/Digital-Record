@@ -7,6 +7,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add User</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 <style>
 body {
 	color: black;
@@ -50,6 +52,12 @@ input[type=text], input[type=password], input[type=date] {
 }
 .text-danger {
 	color: #7FE817
+}
+.fa-home{
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    font-size: 4em;
 }
 </style>
 <script>
@@ -129,7 +137,7 @@ input[type=text], input[type=password], input[type=date] {
 		</div>
 	</div>
 	<a href="/user/userlogin">
-	<button class="bac">Back</button></a>
+	 <em class="fa fa-home" style="font-size:48px;color:black"></em></a>	
 	
 	</body>
 </html>
