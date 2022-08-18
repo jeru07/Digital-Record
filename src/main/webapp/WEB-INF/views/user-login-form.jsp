@@ -7,7 +7,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>User Login Page</title>
+<link href='https://css.gg/home.css' rel='stylesheet'>
 <style>
+
 body {
 	background-color: #77DD77;
 	font-family: Verdana;
@@ -83,6 +85,16 @@ outline: 0;
     min-width: 196px;
   }
 }
+.gg-home{
+  position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 70px;
+    color:white;
+
+left:px;
+top:20px;
+}
 .re{
 color:white;
 font-weight:bold;
@@ -114,7 +126,7 @@ font-size:20px;
 				<div>
 					<form:button class="register">DONE</form:button>
 				</div>
-
+          
 			</form:form>
 			<a href="/user/addformuser">
 						<button type="submit"
@@ -124,7 +136,8 @@ font-size:20px;
 		<div class="re">${result}</div>
 		
 		<a href="/user/first">
-	<button class="bac">Back</button></a>
+	 <em class="gg-home"></em></a>
+	
 	
 </body>
 </html>

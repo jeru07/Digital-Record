@@ -146,6 +146,10 @@ select {
 			<form:button type="submit" class="register">UPLOAD</form:button>
 		</div>
 		</form:form>
-		<button class="bac" onclick="history.back()">Back</button></a>
+		<button class="bac" onclick="history.back()">Back</button>
+		
+		<script type="text/javascript">
+		alert("Add Documents");
+	</script>
 </body>
 </html>

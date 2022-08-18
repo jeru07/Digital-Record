@@ -35,6 +35,12 @@ form {
 font-size:20px;
 font-weight:bold;
 }
+.bac {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
 </style>
 </head>
 <body>
@@ -58,5 +64,8 @@ font-weight:bold;
 			</div>
 			</div>
 			<div class ="res">${result}</div>
+			
+			<a href="/user/first">
+	<button class="bac">Back</button></a>
 </body>
 </html>
