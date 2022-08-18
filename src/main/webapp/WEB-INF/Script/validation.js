@@ -1,6 +1,6 @@
 
  let userNameCheck = function() {
-		 let nameRegex = /^[a-zA-z\s]+$/;
+		 let nameRegex = `^[a-zA-z\s]+$`;
 		 if(!document.form.userName.value.match(nameRegex)){
 				if(alert("Name can't be empty or must contain only alphabets")){ 
 					 document.form.userName.focus();
@@ -29,7 +29,7 @@
 	}
 	 
 	 let passwordCheck = function() {
-		 let nameRegex = /^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$/;
+		 let nameRegex = `^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$`;
 		 if(!document.form.userPassword.value.match(nameRegex)){
 				if(alert("Password must begin with letter and contain atleast one number and must have atleast 8 characters")){ 
 					 document.form.userPassword.focus();
