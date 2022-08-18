@@ -35,15 +35,20 @@ form {
 
 .container {
 	position: relative;
+} 
+.bac {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
 }
-
 .center {
 	position: absolute;
 	top: 50%;
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
-}
+} 
 /* Styling Button */
 .register {
 	align-items: center;
@@ -83,6 +88,8 @@ color:white;
 font-weight:bold;
 font-size:20px;
 }
+
+
 </style>
 </head>
 <body>
@@ -115,5 +122,9 @@ font-size:20px;
 		</div>
 	</div>
 		<div class="re">${result}</div>
+		
+		<a href="/user/first">
+	<button class="bac">Back</button></a>
+	
 </body>
 </html>

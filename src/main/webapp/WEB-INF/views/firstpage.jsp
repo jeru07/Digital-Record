@@ -93,6 +93,8 @@ body {
 	<a href="/admin/adminform">
 	<button class="button1">ADMIN</button></a>
 	
+	<a href="/user/home">
+	<button class="back">Back</button></a>
 	
 </body>
 </html>

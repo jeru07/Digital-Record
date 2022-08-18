@@ -145,7 +145,6 @@ tr:hover {
 			<caption></caption>
 				<thead>
 					<tr>
-						<th style="color: blue; font-size: 15pt;">USER ID</th>
 						<th style="color: blue; font-size: 15pt;">DOCUMENT NAME</th>
 						<th style="color: blue; font-size: 15pt;">DOCUMENT ID</th>
 						<th style="color: blue; font-size: 15pt;">ISSUE DATE</th>
@@ -160,7 +159,6 @@ tr:hover {
 				<tbody>
 					<c:forEach var="docu" items="${doclist}">
 						<tr>
-							<td>${docu.userId}</td>
 							<td>${docu.documentName}</td>
 							<td>${docu.documentId}</td>
 							<td>${docu.issueDate}</td>

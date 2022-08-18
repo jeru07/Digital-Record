@@ -42,7 +42,12 @@ input[type=text], input[type=password], input[type=date] {
 	width: 100%;
 	opacity: 0.9;
 }
-
+.bac {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
 .text-danger {
 	color: #7FE817
 }
@@ -84,8 +89,7 @@ input[type=text], input[type=password], input[type=date] {
 				<div>
 					<label for="dateOfBirth">Date of Birth: </label> <input type="date"
 						id="dateOfBirth" name="dateOfBirth" type="text" pattern="\s+(?:19\d{2}|20[01][0-9]|2020)[-/.](?:0[1-9]|1[012])[-/.](?:0[1-9]|[12][0-9]|3[01])\b">
-					<form:errors path="dateOfBirth" cssClass="text-danger" />
-					<%-- <form:input path="dateOfBirth" /> --%>
+					<form:errors path="dateOfBirth" cssClass="text-danger" onblur="checkDateOwner();"/>
 				</div>
 				<div class="form-control">
 					<label for="eMail">E-mail: </label>
@@ -121,6 +125,9 @@ input[type=text], input[type=password], input[type=date] {
 			</form:form>
 		</div>
 	</div>
+	<a href="/user/userlogin">
+	<button class="bac">Back</button></a>
+	
 	<script type="text/javascript">
 	 var userNameCheck = function() {
 		 var nameRegex = new RegExp("^[a-zA-z\s]+$");
@@ -189,7 +196,18 @@ input[type=text], input[type=password], input[type=date] {
 		 else{
 		    	return false;
 		    }
+		 
+	 }
+	 function checkDateOwner() {
+	       let date = document.getElementById('dateOfBirth').value;
+	       let now = new Date();
+	       let dt1 = Date.parse(now),
+	       dt2 = Date.parse(date);
+	       if (dt2 >= dt1) {
+	            alert("Date must be in the past");
+	       }
 	 }
 	</script>
+	
 	</body>
 </html>

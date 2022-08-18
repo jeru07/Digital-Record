@@ -25,7 +25,7 @@ text-shadow: 1px 1px 2px red, 0 0 25px white, 0 0 5px white;
 .visit
 {
  position: absolute;
-    top:500px;;
+    top:500px;
     background-color:#66FF00;
     color: #fff;
     border:none; 
@@ -65,6 +65,9 @@ align-items: center;
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  position: absolute;
+    top:440px;
+     left:590px;
 }
 button{
 background: #FF4742;
@@ -89,6 +92,10 @@ background: #FF4742;
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
+  position: absolute;
+    top:440px;
+     left:590px;
+  
 } 
 button:hover,
 button:active {

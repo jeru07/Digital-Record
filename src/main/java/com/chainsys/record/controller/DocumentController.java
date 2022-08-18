@@ -28,6 +28,9 @@ public class DocumentController {
 	DocumentService documentService;
 	@Autowired
 	private UserService userservice;
+	
+	private static final String GETUSER="getuser";
+	
 	@GetMapping("/list")
 	public String getDocuments(Model model) {
 		List<Documents> thedoc = documentService.getDocuments();
@@ -55,7 +58,7 @@ public class DocumentController {
 		documentService.save(thedoc);
 		model.addAttribute("userId", thedoc.getUserId());
 		Users user=userservice.findByid(thedoc.getUserId());
-		model.addAttribute("getuser", user);
+		model.addAttribute(GETUSER, user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
 		model.addAttribute("doclist", dto.getDoclist());
         return "list-user-document";
@@ -73,7 +76,7 @@ public class DocumentController {
 	public String updateDocuments(@ModelAttribute("updateddocuments") Documents thedoc,Model model) {
 		documentService.save(thedoc);
 		Users user=userservice.findByid(thedoc.getUserId());
-		model.addAttribute("getuser", user);
+		model.addAttribute(GETUSER, user);
 		UsersDocumentsDTO dto=userservice.getUserDocument(user.getUserId());
 		model.addAttribute("doclist", dto.getDoclist());
 		return "list-user-document";
@@ -82,7 +85,7 @@ public class DocumentController {
   	public String deleteDocuments(@RequestParam("id") int id,Model model) {
         Documents thedoc = documentService.findByid(id);
 		Users user=userservice.findByid(thedoc.getUserId());
-		model.addAttribute("getuser", user);
+		model.addAttribute(GETUSER, user);
 		 documentService.deleteById(id);
 		return "list-user-document";
   	}

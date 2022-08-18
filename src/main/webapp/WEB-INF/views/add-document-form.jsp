@@ -55,6 +55,12 @@ select {
 	width: 100%;
 	opacity: 0.9;
 }
+.bac {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
 </style>
 </head>
 <body>
@@ -140,5 +146,6 @@ select {
 			<form:button type="submit" class="register">UPLOAD</form:button>
 		</div>
 		</form:form>
+		<button class="bac" onclick="history.back()">Back</button></a>
 </body>
 </html>
