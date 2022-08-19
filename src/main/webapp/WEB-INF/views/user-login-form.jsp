@@ -85,7 +85,7 @@ outline: 0;
     min-width: 196px;
   }
 }
-.fa-home{
+.fa-arrow-left{
     position: absolute;
     top: 20px;
     left: 16px;
@@ -133,7 +133,7 @@ font-size:20px;
 		<div class="re">${result}</div>
 		
 		<a href="/user/first">
-      <em class="fa fa-home" style="font-size:48px;color:white"></em></a>	
+      <em class="fa fa-arrow-left" style="font-size:48px;color:white"></em></a>	
 	
 </body>
 </html>

@@ -53,7 +53,7 @@ input[type=text], input[type=password], input[type=date] {
 .text-danger {
 	color: #7FE817
 }
-.fa-home{
+.fa-arrow-left{
     position: absolute;
     top: 20px;
     left: 16px;
@@ -137,7 +137,7 @@ input[type=text], input[type=password], input[type=date] {
 		</div>
 	</div>
 	<a href="/user/userlogin">
-	 <em class="fa fa-home" style="font-size:48px;color:black"></em></a>	
+	 <em class="fa fa-arrow-left" style="font-size:48px;color:black"></em></a>	
 	
 	</body>
 </html>

@@ -99,19 +99,19 @@ select {
 			<label for="documentId">Document Id</label>
 			<div>
 			<form:input path="documentId" type="text" title="Id must be number"
-				required="true" placeholder="enter document number"/>
+				required="true" placeholder="enter document number" required/>
 			<form:errors path="documentId" cssClass="text-danger" /></div>
 		</div>
 		
 		<div>
 			<label for="issueDate">Issue Date</label> <input type="date"
-				id="issueDate" name="issueDate" type="text" >
+				id="issueDate" name="issueDate" type="text" required>
 			<form:errors path="issueDate" cssClass="text-danger" />
 		</div>
 		
 		<div>
 			<label for="validTill">VALID Till</label> <input type="date"
-				id="validTill" name="validTill" type="text">
+				id="validTill" name="validTill" type="text" required>
 			<form:errors path="validTill" cssClass="text-danger" />
 		</div>
 		
